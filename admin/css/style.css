@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* reset */
+html, body {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: visible;
+  min-width: auto;
+}
+
+em, i {
+  font-style: normal;
+}
+
+/* 공통 */
+.wrapper {
+  min-width: 1200px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.ui-my.text-xs {
+  font-size: 12px;
+}
+
+.ui-my.text-small {
+  font-size: 14px;
+}
+
+.ui.grid {
+  margin: 0;
+}
+
+/* 로그인 */
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.login .inner {
+  width: 550px;
+  padding: 40px 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.login .inner .text-small {
+  margin-top: 15px;
+}
+
+.login .text-xs {
+  margin-top: 10px;
+}
+
+.login .ui.header {
+  font-size: 28px;
+}
+
+.login .ui.form {
+  margin-bottom: 25px;
+}
+
+/* 기본 레이아웃 */
+.ly-aside {
+  padding: 5px 0;
+  text-align: right;
+  background: #f6f6f6;
+}
+
+.ly-aside .user-name {
+  font-size: 14px;
+}
+
+.ly-aside .ui.button {
+  margin: 0 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.ly-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 12px 0 0;
+}
+
+.ly-header .logo {
+  min-height: auto;
+  margin: 0 12px;
+}
+
+.ly-header .ui.menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 0;
+}
+
+.ly-header .ui.menu .item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ly-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 106px);
+  padding: 12px;
+}
+
+.ly-container .ui.header {
+  margin-top: 3px;
+}
+
+.fliter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+.fliter-container .ui.input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.main-content {
+  height: calc(100% - 99px);
+}
+
+.main-content-aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.main-content-aside em {
+  font-size: 18px;
+}
+
+.main-content .ui.grid {
+  height: calc(100% - 70px);
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.main-content .ui.grid .column {
+  height: 100%;
+  overflow: auto;
+}
