@@ -32,8 +32,43 @@ em, i {
   font-size: 14px;
 }
 
+.ui-my.inline-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ui-my.inline-group .ui.input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.ui-my.inline-group .ui.button {
+  margin: 0 0 0 5px;
+}
+
 .ui.grid {
   margin: 0;
+}
+
+.ui.table .ui.input {
+  width: 100%;
+}
+
+.ui.table .ui.dropdown {
+  width: 100%;
+}
+
+.ui.table tbody tr:first-child th {
+  border-top: 0;
+}
+
+.ui.table tbody th {
+  padding: .78571429em .78571429em;
+  text-align: inherit;
+  background: #f9fafb;
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
 }
 
 /* 로그인 */
@@ -183,4 +218,18 @@ em, i {
 .main-content .ui.grid .column {
   height: 100%;
   overflow: auto;
+}
+
+/* IE10+ CSS styles goes underneath */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* 공통 */
+  .ui-my.inline-group .ui.input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 200px;
+            flex: 1 0 200px;
+  }
+  /* 컴포넌트 */
+  .fliter-container .ui.input {
+    margin: 0 15px;
+  }
 }

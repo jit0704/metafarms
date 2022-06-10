@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모달 팝업</title>
+  <link rel="stylesheet" href="/admin/css/semantic.min.css">
+  <link rel="stylesheet" href="/admin/css/style.css">
+  <script src="/admin/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/admin/js/common/semantic.min.js"></script>
+  <script src="/admin/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="ui modal">
+      <div class="header">등록/수정</div>
+      <div class="content">
+        <table class="ui celled table">
+          <tbody>
+            <tr>
+              <th>이름</th>
+              <td>
+                <div class="ui input">
+                  <input type="text">
+                </div>
+              </td>
+              <th>아이디</th>
+              <td>
+                <div class="ui-my inline-group">
+                  <div class="ui input">
+                    <input type="text">
+                  </div>
+                  <button class="ui secondary button">중복확인</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>직급</th>
+              <td>
+                <div class="ui input">
+                  <input type="text">
+                </div>
+              </td>
+              <th>비밀번호</th>
+              <td>
+                <div class="ui input">
+                  <input type="password">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>재직여부</th>
+              <td>
+                <select class="ui dropdown">
+                  <option value="State">State</option>
+                  <option value="ttate">ttate</option>
+                  <option value="utate">utate</option>
+                </select>
+              </td>
+              <th>비밀번호확인</th>
+              <td>
+                <div class="ui input">
+                  <input type="password">
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <div class="ui button green ok">저장</div>
+        <div class="ui button cancel">닫기</div>
+      </div>
+    </div>
+    <!-- //modal -->
+  </div>
+
+  <script>
+    // 버튼 클릭 이벤트에 넣어서 호출 가능. 현재는 페이지 접속시 호출.
+    $('.ui.modal').modal('show');
+  </script>
+</body>
+</html>
