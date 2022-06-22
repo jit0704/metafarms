@@ -71,6 +71,18 @@ em, i {
   border-top: 1px solid rgba(34, 36, 38, 0.1);
 }
 
+.ui.modal.ui.custom-mini-msg {
+  text-align: center;
+}
+
+.ui.modal.ui.custom-mini-msg .content {
+  line-height: 28px;
+}
+
+.ui.modal.ui.custom-mini-msg .actions {
+  text-align: center;
+}
+
 /* 로그인 */
 .login {
   display: -webkit-box;
