@@ -13,7 +13,10 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="ui modal">
+    <!-- 220623 멀티 모달 팝업 테스트를 위해 추가 -->
+    <button type="button" id="btn-test">모달팝업호출</button>
+
+    <div class="ui first coupled modal">
       <div class="header">등록/수정</div>
       <div class="content">
         <table class="ui celled table">
@@ -74,11 +77,47 @@
       </div>
     </div>
     <!-- //modal -->
+
+    <!-- 220623 멀티 모달 팝업 테스트를 위해 추가 -->
+    <!-- alert 팝업 -->
+    <div class="ui second modal coupled mini custom-mini-msg">
+      <div class="content">
+        사용하실 수 있는 아이디 입니다.
+      </div>
+      <div class="actions">
+        <div class="ui button green ok">확인</div>
+      </div>
+    </div>
+    <!-- //modal -->
+
+    <!-- confirm 팝업 -->
+    <!-- <div class="ui second modal coupled mini custom-mini-msg">
+      <div class="content">
+        가입되어 있지 않은 이메일 주소입니다.<br />
+        해당 이메일 주소로 회원가입을 하시겠습니까?
+      </div>
+      <div class="actions">
+        <div class="ui button cancel">취소</div>
+        <div class="ui button green ok">확인</div>
+      </div>
+    </div> -->
+    <!-- //modal -->
   </div>
 
   <script>
-    // 버튼 클릭 이벤트에 넣어서 호출 가능. 현재는 페이지 접속시 호출.
-    $('.ui.modal').modal('show');
+    // 220623 멀티 모달 팝업 테스트
+    $('#btn-test').on('click', () => {
+      // 멀티 모달 팝업 initialize
+      $('.coupled.modal').modal({
+        allowMultiple: true
+      });
+
+      // 첫번째 모달 팝업 호출
+      $('.first.modal').modal('show');
+
+      // 중복확인 눌렀을때 보여지는 alert or confirm 팝업 요소 호출
+      $('.second.modal').modal('attach events', '.first.modal .secondary.button');
+    });
   </script>
 </body>
 </html>
