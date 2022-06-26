@@ -172,6 +172,17 @@ em, i {
           flex: 1;
 }
 
+.ly-header .ui.menu .item.badge-new::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -3px;
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon_new.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .ly-container {
   display: -webkit-box;
   display: -ms-flexbox;
