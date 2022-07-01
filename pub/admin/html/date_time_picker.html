@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Time Picker</title>
+  <link rel="stylesheet" href="/pub/admin/css/semantic.min.css">
+  <link rel="stylesheet" href="/pub/admin/css/flatpickr.min.css">
+  <link rel="stylesheet" href="/pub/admin/css/style.css">
+  <script src="/pub/admin/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/admin/js/common/semantic.min.js"></script>
+  <script src="/pub/admin/js/lib/flatpickr.js"></script>
+  <script src="/pub/admin/js/lib/ko.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="ui input" style="gap: 0 10px;">
+      <input type="text" placeholder="날짜 및 시간 선택" class="date-time-choice">
+      <input type="text" placeholder="날짜 및 시간 선택" class="date-time-choice">
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      var $dateTimeInput = $('.date-time-choice');
+      // 현재 시간 두 자리 number값으로 받아오기
+      var currentDate = new Date();
+      var currentHours = ('0' + currentDate.getHours()).slice(-2);
+      var currentMin = ('0' + currentDate.getMinutes()).slice(-2);
+
+      // flatpickr 한국어로 설정
+      flatpickr.localize(flatpickr.l10ns.ko);
+      flatpickr($dateTimeInput);
+
+      // flatpickr initialization
+      $dateTimeInput.flatpickr({
+        enableTime: true, // 시간 선택란 활성화
+        time_24hr: true, // 24시간제로 표시 여부
+        defaultHour: currentHours, // default hour
+        defaultMinute: currentMin, // default minute
+        dateFormat: "Y-m-d H:i", // 날짜 + 시간 포맷 설정
+        hourIncrement: 1, // 시간 입력 카운트 +1 설정, defautl : +1
+        minuteIncrement: 1, // 분 입력 카운트 +1 설정, defautl : +5
+      });
+    });
+  </script>
+</body>
+</html>
