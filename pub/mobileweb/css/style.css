@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/* ###############################
+    초기화 CSS
+################################## */
+html {
+  height: 100%;
+  color: #1a1a1a;
+  -webkit-text-size-adjust: none;
+}
+
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body {
+  min-width: 320px;
+  max-width: 820px;
+  margin: 0 auto;
+  line-height: 1.2;
+  font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100%;
+  background: #fff;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, select, textarea {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  background: transparent;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+img {
+  width: 100%;
+  vertical-align: top;
+  border: 0;
+}
+
+address, caption, em, th, var {
+  font-style: normal;
+  font-weight: 400;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+caption {
+  display: none;
+}
+
+th {
+  text-align: left;
+}
+
+em, span {
+  display: inline-block;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  border: 0;
+  background: transparent;
+}
+
+label {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 700;
+  src: local("Spoqa Han Sans Neo Bold"), url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 500;
+  src: local("Spoqa Han Sans Neo Medium"), url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 400;
+  src: local("Spoqa Han Sans Neo Regular"), url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 300;
+  src: local("Spoqa Han Sans Neo Light"), url("../font/SpoqaHanSansNeo-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Spoqa Han Sans Neo";
+  font-weight: 100;
+  src: local("Spoqa Han Sans Neo Thin"), url("../font/SpoqaHanSansNeo-Thin.woff") format("woff");
+}
+
+@media only screen and (min-width: 700px) {
+  /* custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+}
+
+.wrap > .container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.btn-gnb {
+  width: 24px;
+  height: 24px;
+  margin-right: 22px;
+  background: url(../images/icon_burger.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+/* ###############################
+    전역 공통 class
+################################## */
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* ###############################
+    공통 컴포넌트
+################################## */
+.lr-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header.stack {
+  position: relative;
+  z-index: 1;
+}
+
+.lang-choice button {
+  display: block;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #727e8b;
+}
+
+.lang-choice button::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.lang-ko::before {
+  background: url(../images/icon_flag_kor.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.lang-en::before {
+  background: url(../images/icon_flag_en.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.input-basic {
+  position: relative;
+}
+
+.input-basic.pass::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  width: 16px;
+  height: 17px;
+  background: url(../images/icon_chk2.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.input-basic em {
+  display: block;
+  margin-bottom: 5px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #727e8b;
+}
+
+.input-basic input {
+  padding: 0 32px 9px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.input-basic input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input::placeholder {
+  color: #bbb;
+}
+
+.input-basic-group {
+  height: 65px;
+}
+
+.input-basic-group + .input-basic-group {
+  margin-top: 17px;
+}
+
+.chkbox em {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #727e8b;
+}
+
+.chkbox em::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #d6d6d6;
+  vertical-align: middle;
+}
+
+.chkbox input:checked + em::before {
+  border: 1px solid #51c4d9;
+  background: url(../images/icon_chk.png) no-repeat 50% 50%;
+  background-size: 12px 9px;
+}
+
+.btn-back {
+  width: 50px;
+  height: 50px;
+  background: url(../images/btn_back.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  background: #cccfd9;
+  text-align: center;
+}
+
+.btn-block.large {
+  line-height: 52px;
+  font-size: 14px;
+}
+
+.btn-block.active {
+  background: #014655;
+}
+
+.error-txt {
+  margin: 5px 0 0 5px;
+  visibility: hidden;
+  font-size: 12px;
+  color: #e63312;
+}
+
+.error-txt.active {
+  visibility: visible;
+}
+
+/* ###############################
+    Alert, confirm 디자인 커스텀
+################################## */
+.jconfirm.jconfirm-white .jconfirm-bg,
+.jconfirm.jconfirm-light .jconfirm-bg {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.jc-bs3-container {
+  padding: 0 40px;
+}
+
+.jconfirm .jconfirm-box {
+  padding: 0;
+}
+
+.jconfirm .jconfirm-box div.jconfirm-content-pane {
+  margin-bottom: 0;
+}
+
+.jconfirm-content {
+  padding: 42px 0 35px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.jconfirm.jconfirm-white .jconfirm-box .jconfirm-buttons,
+.jconfirm.jconfirm-light .jconfirm-box .jconfirm-buttons {
+  float: none;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons {
+  padding-bottom: 20px;
+}
+
+/* ###############################
+    로그인
+################################## */
+.login {
+  overflow-y: auto;
+  width: 100%;
+  height: calc(100vh - 50px);
+  margin-top: -50px;
+}
+
+.login > section:not(:first-child) {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.login-input {
+  position: relative;
+  margin-top: -30%;
+  border-radius: 30px 30px 0 0;
+  background: #fff;
+}
+
+.login-input h1 {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.login-input .input-basic-group:first-child {
+  margin-bottom: 10px;
+}
+
+.login-input .lr-box {
+  margin: 18px 0 40px;
+}
+
+.login .btn-block {
+  width: calc(100% - 50px);
+  margin: 0 25px;
+}
+
+.login .account-search {
+  padding: 23px 0;
+}
+
+.login .account-search a {
+  line-height: 16px;
+  color: #727e8b;
+}
+
+.login .account-search .left a:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  margin: 0 8px;
+  background: #bbb;
+  vertical-align: middle;
+}
