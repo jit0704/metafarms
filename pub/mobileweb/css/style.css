@@ -430,7 +430,41 @@ label {
 }
 
 .jconfirm .jconfirm-box .jconfirm-buttons {
-  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7px;
+  padding: 0 20px 20px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons .btn {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0;
+  padding: 0;
+  line-height: 42px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 12px !important;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons .btn.c-gray {
+  background: #cccfd9;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons .btn.c-deep-green {
+  background: #0289a6;
 }
 
 /* ###############################
