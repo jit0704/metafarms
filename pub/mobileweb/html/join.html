@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <a href="#" class="btn-back">
+        <span class="blind">뒤로가기</span>
+      </a>
+      <h1>회원가입</h1>
+      <span class="lang-display ko">한국어</span>
+    </header>
+    <main class="container join">
+      <section class="join-form">
+        <div class="input-basic-group">
+          <div class="input-basic"> <!-- validation 체크 시 이상 없으면 pass 클래스 추가  -->
+            <em>아이디(이메일)</em>
+            <input type="text" placeholder="이메일을 입력" class="pdr60">
+            <button type="type" class="btn-form-chk">중복체크</button>
+          </div>
+          <!-- 중복체크시 사용가능한 아이디이면 보여집니다. -->
+          <!-- <span class="good-txt active">* 해당 이메일로 가입 가능합니다.</span> -->
+          <span class="error-txt active">! 이메일 형식이 올바르지 않습니다.</span> <!-- active 클래스 제거시 숨김 -->
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>회원이름</em>
+            <input type="text" placeholder="성함 입력">
+          </div>
+          <span class="error-txt active">! 이름을 정확히 입력해 주세요.</span>
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>비밀번호</em>
+            <input type="password" placeholder="4~12자 영문, 대소문자, 숫자 특수문자 혼합">
+          </div>
+          <span class="error-txt active">! 비밀번호는 영문, 대문자, 숫자 특수문자 혼합 4자리 이상입니다.</span>
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>비밀번호 확인</em>
+            <input type="password" placeholder="비밀번호 재입력">
+          </div>
+          <span class="error-txt active">! 비밀번호가 일치하지 않습니다.</span>
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>휴대폰번호</em>
+            <div class="divider-two">
+              <span class="selectbox">
+                <select>
+                  <option>국가번호</option>
+                  <option>+82</option>
+                </select>
+              </span>
+              <input type="number" placeholder="'-' 없이 휴대폰번호 입력">
+            </div>
+            <!-- //divider-two -->
+          </div>
+          <!-- //input-basic -->
+          <span class="error-txt active">! 휴대번호를 정확히 입력해 주세요.</span>
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>추천인 아이디 (필수)</em>
+            <input type="password" placeholder="추천인 아이디(이메일) 입력">
+          </div>
+          <span class="error-txt active">! 추천인 아이디를 입력해 주세요.</span>
+        </div>
+        <!-- //input-basic-group -->
+        <div class="input-basic-group">
+          <div class="input-basic">
+            <em>인증번호 (필수)</em>
+            <input type="number" placeholder="이메일로 발송된 인증번호 입력" class="pdr90">
+            <button type="type" class="btn-form-chk">인증번호 발송</button>
+          </div>
+          <!-- 인증이 완료되면 보여집니다. -->
+          <!-- <span class="good-txt active">* 인증 완료되었습니다.</span> -->
+          <span class="error-txt active">! 인증번호가 일치하지 않습니다.</span>
+        </div>
+        <!-- //input-basic-group -->
+      </section>
+
+      <section class="join-term">
+        <label class="chkbox">
+          <input type="checkbox">
+          <em>회원 약관 동의</em>
+        </label>
+      </section>
+    </main>
+    <a href="#" class="btn-block large bdr-radius-none">회원가입</a> <!-- active 클래스 추가시 버튼 활성화 디자인 -->
+  </div>
+  <!-- //wrap -->
+</body>
+</html>

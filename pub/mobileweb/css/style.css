@@ -26,12 +26,12 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow-y: hidden;
   min-height: 100%;
   background: #fff;
 }
 
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -53,9 +53,18 @@ input, select, textarea {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   position: absolute;
   width: 1px;
   height: 1px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
 }
 
 table {
@@ -109,6 +118,7 @@ button {
   color: inherit;
   border: 0;
   background: transparent;
+  font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
 }
 
 label {
@@ -164,6 +174,17 @@ label {
   }
 }
 
+/* ###############################
+    전역 class 정의
+################################## */
+.pdr60 {
+  padding-right: 60px !important;
+}
+
+.pdr90 {
+  padding-right: 90px !important;
+}
+
 .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -185,216 +206,7 @@ label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.btn-gnb {
-  width: 24px;
-  height: 24px;
-  margin-right: 22px;
-  background: url(../images/icon_burger.png) no-repeat 0 0;
-  background-size: contain;
-}
-
-/* ###############################
-    전역 공통 class
-################################## */
-.blind {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-}
-
-/* ###############################
-    공통 컴포넌트
-################################## */
-.lr-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header.stack {
-  position: relative;
-  z-index: 1;
-}
-
-.lang-choice button {
-  display: block;
-  line-height: 18px;
-  font-weight: 500;
-  font-size: 12px;
-  color: #727e8b;
-}
-
-.lang-choice button::before {
-  content: "";
-  display: inline-block;
-  width: 27px;
-  height: 18px;
-  margin-right: 7px;
-  vertical-align: middle;
-}
-
-.lang-ko::before {
-  background: url(../images/icon_flag_kor.png) no-repeat 0 0;
-  background-size: contain;
-}
-
-.lang-en::before {
-  background: url(../images/icon_flag_en.png) no-repeat 0 0;
-  background-size: contain;
-}
-
-.input-basic {
-  position: relative;
-}
-
-.input-basic.pass::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 8px;
-  width: 16px;
-  height: 17px;
-  background: url(../images/icon_chk2.png) no-repeat 0 0;
-  background-size: contain;
-}
-
-.input-basic em {
-  display: block;
-  margin-bottom: 5px;
-  line-height: 16px;
-  font-size: 12px;
-  color: #727e8b;
-}
-
-.input-basic input {
-  padding: 0 32px 9px 0;
-  font-size: 14px;
-  border-bottom: 1px solid #d6d6d6;
-}
-
-.input-basic input::-webkit-input-placeholder {
-  color: #bbb;
-}
-
-.input-basic input:-ms-input-placeholder {
-  color: #bbb;
-}
-
-.input-basic input::-ms-input-placeholder {
-  color: #bbb;
-}
-
-.input-basic input::placeholder {
-  color: #bbb;
-}
-
-.input-basic-group {
-  height: 65px;
-}
-
-.input-basic-group + .input-basic-group {
-  margin-top: 17px;
-}
-
-.chkbox em {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #727e8b;
-}
-
-.chkbox em::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  border: 1px solid #d6d6d6;
-  vertical-align: middle;
-}
-
-.chkbox input:checked + em::before {
-  border: 1px solid #51c4d9;
-  background: url(../images/icon_chk.png) no-repeat 50% 50%;
-  background-size: 12px 9px;
-}
-
-.btn-back {
-  width: 50px;
-  height: 50px;
-  background: url(../images/btn_back.png) no-repeat 0 0;
-  background-size: contain;
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-  border-radius: 5px;
-  color: #fff;
-  background: #cccfd9;
-  text-align: center;
-}
-
-.btn-block.large {
-  line-height: 52px;
-  font-size: 14px;
-}
-
-.btn-block.active {
-  background: #014655;
-}
-
-.error-txt {
-  margin: 5px 0 0 5px;
-  visibility: hidden;
-  font-size: 12px;
-  color: #e63312;
-}
-
-.error-txt.active {
-  visibility: visible;
 }
 
 /* ###############################
@@ -467,12 +279,327 @@ label {
   background: #0289a6;
 }
 
+.btn-gnb {
+  width: 24px;
+  height: 24px;
+  margin-right: 22px;
+  background: url(../images/icon_burger.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+/* ###############################
+    전역 공통 class
+################################## */
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* ###############################
+    공통 컴포넌트
+################################## */
+.lr-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 25px;
+}
+
+.header.stack {
+  position: relative;
+  z-index: 1;
+}
+
+.header h1 {
+  padding-left: 45px;
+  font-size: 17px;
+  color: #000;
+  font-weight: 500;
+}
+
+.lang-choice button {
+  display: block;
+  line-height: 18px;
+  font-weight: 500;
+  font-size: 12px;
+  color: #727e8b;
+}
+
+.lang-choice button::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.lang-ko::before {
+  background: url(../images/icon_flag_kor.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.lang-en::before {
+  background: url(../images/icon_flag_en.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.lang-display {
+  font-weight: 500;
+  color: #727e8b;
+}
+
+.lang-display::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 18px;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
+.lang-display.ko::before {
+  background: url(../images/icon_flag_kor.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.lang-display.en::before {
+  background: url(../images/icon_flag_en.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.input-basic {
+  position: relative;
+}
+
+.input-basic.pass::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  width: 16px;
+  height: 17px;
+  background: url(../images/icon_chk2.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.input-basic.pass .btn-form-chk {
+  display: none;
+}
+
+.input-basic em {
+  display: block;
+  margin-bottom: 5px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #727e8b;
+}
+
+.input-basic input {
+  padding: 0 32px 9px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.input-basic input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.input-basic input::placeholder {
+  color: #bbb;
+}
+
+.input-basic .divider-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 0 8px;
+}
+
+.input-basic .divider-two .selectbox {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.input-basic .btn-form-chk {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  line-height: 16px;
+  color: #0289a6;
+  font-weight: 500;
+}
+
+.input-basic-group {
+  height: 65px;
+}
+
+.input-basic-group + .input-basic-group {
+  margin-top: 17px;
+}
+
+.chkbox em {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #727e8b;
+}
+
+.chkbox em::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #d6d6d6;
+  vertical-align: middle;
+}
+
+.chkbox input:checked + em::before {
+  border: 1px solid #51c4d9;
+  background: url(../images/icon_chk.png) no-repeat 50% 50%;
+  background-size: 12px 9px;
+}
+
+.selectbox {
+  position: relative;
+}
+
+.selectbox::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arrow_arrow_right.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.selectbox select {
+  width: 87px;
+  height: 30px;
+}
+
+.btn-back {
+  width: 50px;
+  height: 50px;
+  background: url(../images/btn_back_black.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-back.c-white {
+  background: url(../images/btn_back.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  color: #fff;
+  background: #cccfd9;
+  text-align: center;
+}
+
+.btn-block.bdr-radius-none {
+  border-radius: 0;
+}
+
+.btn-block.large {
+  line-height: 52px;
+  font-size: 14px;
+}
+
+.btn-block.active {
+  background: #014655;
+}
+
+.error-txt {
+  margin: 5px 0 0 5px;
+  visibility: hidden;
+  font-size: 12px;
+  color: #e63312;
+}
+
+.error-txt.active {
+  visibility: visible;
+}
+
+.good-txt {
+  margin: 5px 0 0 5px;
+  visibility: hidden;
+  font-size: 12px;
+  color: #51c4d9;
+}
+
+.good-txt.active {
+  visibility: visible;
+}
+
 /* ###############################
     로그인
 ################################## */
 .login {
   overflow-y: auto;
-  width: 100%;
   height: calc(100vh - 50px);
   margin-top: -50px;
 }
@@ -527,4 +654,17 @@ label {
   margin: 0 8px;
   background: #bbb;
   vertical-align: middle;
+}
+
+/* ###############################
+    회원가입
+################################## */
+.join {
+  overflow-y: auto;
+  height: calc(100vh - 102px);
+  padding: 25px 25px 0;
+}
+
+.join-term {
+  padding: 20px 0 45px;
 }
