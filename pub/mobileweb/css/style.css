@@ -17,7 +17,7 @@ html * {
 html,
 body {
   min-width: 320px;
-  max-width: 820px;
+  max-width: 550px;
   margin: 0 auto;
   line-height: 1.2;
   font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
@@ -155,7 +155,7 @@ label {
   src: local("Spoqa Han Sans Neo Thin"), url("../font/SpoqaHanSansNeo-Thin.woff") format("woff");
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 550px) {
   /* custom scrollbar */
   ::-webkit-scrollbar {
     width: 20px;
@@ -277,6 +277,20 @@ label {
 
 .jconfirm .jconfirm-box .jconfirm-buttons .btn.c-deep-green {
   background: #0289a6;
+  font-weight: 400;
+}
+
+.alert-style1 > em {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.alert-style1 ul {
+  margin-top: 25px;
+}
+
+.alert-style1 ul li {
+  line-height: 18px;
 }
 
 .btn-gnb {
@@ -339,6 +353,11 @@ label {
 .header.stack {
   position: relative;
   z-index: 1;
+}
+
+.header.center h1 {
+  margin: 0 auto;
+  padding-left: 0;
 }
 
 .header h1 {
@@ -595,6 +614,13 @@ label {
   visibility: visible;
 }
 
+.top-guide {
+  line-height: 44px;
+  border-radius: 5px;
+  background: #eaebee;
+  text-align: center;
+}
+
 /* ###############################
     로그인
 ################################## */
@@ -667,4 +693,65 @@ label {
 
 .join-term {
   padding: 20px 0 45px;
+}
+
+/* ###############################
+    회원가입완료
+################################## */
+.join-complete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100vh;
+}
+
+.join-complete section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  margin-top: 105px;
+  text-align: center;
+}
+
+.join-complete section .txt {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.join-complete section .txt::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 10px;
+  background: url(../images/icon_circle_check.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.join-complete .btn-block {
+  width: calc(100% - 50px);
+  margin: auto 25px 25px;
+}
+
+/* ###############################
+    아이디, 비번 찾기
+################################## */
+.find {
+  padding: 16px 25px 0;
+}
+
+.find .top-guide {
+  margin-bottom: 37px;
 }

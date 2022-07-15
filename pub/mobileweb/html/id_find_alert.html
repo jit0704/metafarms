@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/jquery-confirm.min.css">
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/lib/jquery-confirm.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <button type="button" class="btn-example">클릭!</button>
+  </div>
+  <!-- //wrap -->
+  <script>
+    var test1 = 'crie***********';
+    var test2 = 'qazx***********';
+    var test3 = 'erty***********';
+
+    $('.btn-example').on('click', () => {
+      $.alert({
+        title: '',
+        content: `
+          <div class="alert-style1">
+            <em>가입 시 등록하신 이메일 정보입니다</em>
+            <ul>
+              <li>${test1}</li>
+              <li>${test2}</li>
+              <li>${test3}</li>
+            </ul>
+          </div>`,
+        buttons: {
+          btn1: {
+            text: '확인',
+            btnClass: 'c-deep-green'
+          }
+        },
+        draggable: false,
+      });
+    });
+
+    $('.btn-example').trigger('click');
+  </script>
+</body>
+</html>
