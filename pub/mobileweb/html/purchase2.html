@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈 > 상품구매 > 마이닝 상품</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header center" include-html="/pub/mobileweb/html/common/header.html" data-title="상품구매"></header>
+    <div class="tab-container">
+      <a href="purchase1.html">일반 상품</a>
+      <a href="purchase2.html" class="active">마이닝 상품</a>
+    </div>
+    <main class="container sub">
+      <!-- case1: 버튼 비활성화 -->
+      <section class="item-goods theme-dark">
+        <em class="tit">일반 상품명1</em>
+        <div class="lr-box item-goods-info">
+          <div class="left"><img src="../images/temp/@img_309x393.png" alt="상품 이미지"></div>
+          <div class="right">
+            <div class="goods-unit">
+              <em>상품 단가</em>
+              <span>USD600</span>
+            </div>
+            <div class="goods-sum">
+              <em>구매금액(1,000 EA)</em>
+              <span>USD 600,000</span>
+            </div>
+            <div class="input-labeled">
+              <em>구매단위 (EA)</em>
+              <input type="number" placeholder="수량 입력">
+            </div>
+            <div class="input-labeled">
+              <em>총 구매금액 (USD)</em>
+              <input type="text" placeholder="금액 입력">
+            </div>
+          </div>
+          <!-- //right -->
+        </div>
+        <!-- //lr-box -->
+        <div class="btn-group">
+          <button type="button" disabled class="btn-block bordered md">코인 구매</button>
+          <button type="button" disabled class="btn-block md">현금 구매</button>
+        </div>
+      </section>
+
+      <!-- case2: 버튼 활성화 -->
+      <section class="item-goods theme-dark">
+        <em class="tit">일반 상품명2</em>
+        <div class="lr-box item-goods-info">
+          <div class="left"><img src="../images/temp/@img_309x393.png" alt="상품 이미지"></div>
+          <div class="right">
+            <div class="goods-unit">
+              <em>상품 단가</em>
+              <span>USD600</span>
+            </div>
+            <div class="goods-sum">
+              <em>구매금액(1,000 EA)</em>
+              <span>USD 600,000</span>
+            </div>
+            <div class="input-labeled">
+              <em>구매단위 (EA)</em>
+              <input type="number" value="1" placeholder="수량 입력">
+            </div>
+            <div class="input-labeled">
+              <em>총 구매금액 (USD)</em>
+              <input type="text" value="600,000" placeholder="금액 입력">
+            </div>
+          </div>
+          <!-- //right -->
+        </div>
+        <!-- //lr-box -->
+        <div class="purchase-asset-group">
+          <div class="btn-group">
+            <button type="button" data-mate="buy1" class="btn-block bordered md active-red">코인 구매</button>
+            <button type="button" data-mate="buy2" class="btn-block md none-bordered active-red">현금 구매</button>
+          </div>
+
+          <article data-mate="buy1" class="item-goods-buy">
+            <div class="input-basic-group">
+              <div class="input-basic">
+                <em>수량 입금 계좌</em>
+                <input type="text" placeholder="회사 ETH 입금주소">
+              </div>
+            </div>
+            <!-- //input-basic-group -->
+            <div class="input-basic-divider">
+              <div class="input-basic-group">
+                <div class="input-basic">
+                  <em>구매금액</em>
+                  <input type="text" placeholder="구매 수량 입력">
+                </div>
+              </div>
+              <!-- //input-basic-group -->
+              <span class="arrow">&gt;</span>
+              <div class="input-basic-group">
+                <div class="input-basic">
+                  <em>입금할 ETH 수량</em>
+                  <input type="text" placeholder="입금 수량 입력">
+                  <span class="input-txt-guide">1 ETH = USD 1,000,000</span>
+                </div>
+              </div>
+              <!-- //input-basic-group -->
+            </div>
+            <!-- //input-basic-divider -->
+            <div class="input-basic-group">
+              <div class="input-basic">
+                <em>입금 헤시 (TXID)</em>
+                <input type="text" placeholder="입금 헤시(TXID) 값을 입력해 주세요">
+              </div>
+            </div>
+            <!-- //input-basic-group -->
+            <a href="#" class="btn-block md">구매 신청</a> <!-- 버튼 활성화시 active-red 클래스 추가 -->
+          </article>
+
+          <article data-mate="buy2" class="item-goods-buy">
+            <div class="input-basic-group">
+              <div class="input-basic">
+                <em>입금할 계좌정보</em>
+                <input type="text" placeholder="입급 계좌 정보">
+              </div>
+            </div>
+            <!-- //input-basic-group -->
+            <div class="input-basic-group">
+              <div class="input-basic">
+                <em>입금 금액 (USD 1 = KRW 10)</em>
+                <input type="text" placeholder="입급한 금액을 입력해 주세요">
+              </div>
+            </div>
+            <!-- //input-basic-group -->
+            <div class="input-basic-group">
+              <div class="input-basic">
+                <em>입금자 이름</em>
+                <input type="text" placeholder="입금자 이름을 입력해 주세요">
+              </div>
+            </div>
+            <!-- //input-basic-group -->
+            <a href="#" class="btn-block md">구매 신청</a> <!-- 버튼 활성화시 active-red 클래스 추가 -->
+          </article>
+        </div>
+        <!-- //purchase-asset-group -->
+      </section>
+
+      <!-- case3: 품절 -->
+      <section class="item-goods sold-out theme-dark">
+        <em class="tit">일반 상품명3</em>
+        <div class="lr-box item-goods-info">
+          <div class="left"><img src="../images/temp/@img_309x393.png" alt="상품 이미지"></div>
+          <div class="right">
+            <div class="goods-unit">
+              <em>상품 단가</em>
+              <span>USD600</span>
+            </div>
+            <div class="goods-sum">
+              <em>구매금액(1,000 EA)</em>
+              <span>USD 600,000</span>
+            </div>
+            <div class="input-labeled">
+              <em>구매단위 (EA)</em>
+              <input type="number" placeholder="수량 입력">
+            </div>
+            <div class="input-labeled">
+              <em>총 구매금액 (USD)</em>
+              <input type="text" placeholder="금액 입력">
+            </div>
+          </div>
+          <!-- //right -->
+        </div>
+        <!-- //lr-box -->
+        <div class="btn-group">
+          <button type="button" class="btn-block md">품절 되었습니다.</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
