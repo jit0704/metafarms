@@ -162,29 +162,6 @@ label {
   src: local("Spoqa Han Sans Neo Thin"), url("../font/SpoqaHanSansNeo-Thin.woff") format("woff");
 }
 
-@media (min-width: 550px) {
-  /* custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 20px;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #d6dee1;
-    border-radius: 20px;
-    border: 6px solid transparent;
-    background-clip: content-box;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #a8bbbf;
-  }
-  /* 자산관리 > 락업내역 탭 */
-  .purchase-asset-group > article[data-mate="mate-lockup"] .sticky-scroll .tbl-striped {
-    width: calc(100% - 20px);
-  }
-}
-
 /* ###############################
     전역 class 정의
 ################################## */
@@ -200,6 +177,11 @@ label {
 /* align */
 .txt-right {
   text-align: right !important;
+}
+
+/* margin */
+.mgb63 {
+  margin-bottom: 63px !important;
 }
 
 /* padding */
@@ -248,6 +230,13 @@ label {
 
 .wrap > .container.sub.type2 {
   height: calc(100vh - 69px);
+}
+
+.wrap > .container.sub.type3 {
+  height: calc(100vh - 50px);
+  padding: 16px 20px 56px;
+  background: #fff;
+  border-top: 0;
 }
 
 /* ###############################
@@ -402,6 +391,57 @@ label {
   line-height: 18px;
 }
 
+/* ###############################
+    모달 팝업 정의
+################################## */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 320px;
+  max-width: 550px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.modal-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px 20px;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.modal-header {
+  padding: 42px 0 30px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
 /* 버튼 */
 .btn-back {
   width: 50px;
@@ -422,6 +462,10 @@ label {
   color: #fff;
   background: #cccfd9;
   text-align: center;
+}
+
+.btn-block.bg-gray1 {
+  background: #eaebee;
 }
 
 .btn-block.bdr-radius-none {
@@ -447,6 +491,12 @@ label {
 .btn-block.bordered.active-blue {
   color: #1763b6;
   border: 1px solid #1763b6;
+  background: #fff;
+}
+
+.btn-block.bordered.active-deepgreen {
+  color: #0289a6;
+  border: 1px solid #0289a6;
   background: #fff;
 }
 
@@ -476,6 +526,10 @@ label {
 
 .btn-block.active-blue {
   background: #1763b6;
+}
+
+.btn-block.active-deepgreen {
+  background: #0289a6;
 }
 
 .btn-group {
@@ -571,8 +625,20 @@ label {
   color: #e02343;
 }
 
+.btn-search {
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon_search.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.btn-search.c-green {
+  background: url(../images/icon_search_green.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .tbl-container.sticky-scroll {
-  overflow: overlay;
+  overflow: auto;
 }
 
 .tbl-container.sticky-scroll thead {
@@ -794,6 +860,42 @@ label {
   color: #727e8b;
 }
 
+/* filter box */
+.filter-selectbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 5px;
+}
+
+.filter-selectbox .selectbox:nth-child(1) {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.filter-selectbox .selectbox:nth-child(2) {
+  -webkit-box-flex: 1.3;
+      -ms-flex: 1.3;
+          flex: 1.3;
+}
+
+.filter-selectbox .btn-block {
+  -ms-flex-preferred-size: 67px;
+      flex-basis: 67px;
+  line-height: 42px !important;
+}
+
 /* 리스트 */
 .list-definition {
   padding: 25px 15px;
@@ -842,6 +944,33 @@ label {
 
 .list-person li .btn-close {
   margin-left: 3px;
+}
+
+.list-member {
+  overflow-y: overlay;
+  height: 227px;
+  margin: 26px 0 20px;
+}
+
+.list-member li + li {
+  margin-top: 15px;
+}
+
+.list-member.none {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #bbb;
 }
 
 /* icon */
@@ -1133,6 +1262,17 @@ label {
   height: auto;
 }
 
+.input-basic-group.fliter-search input {
+  padding: 0 28px 7px 0;
+  font-size: 12px;
+}
+
+.input-basic-group.fliter-search .btn-search {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
 /* 체크박스 */
 .chkbox {
   display: block;
@@ -1180,6 +1320,17 @@ label {
   position: relative;
 }
 
+.selectbox::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arrow_arrow_right.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .selectbox.bot-line {
   display: block;
   border-bottom: 1px solid #d6d6d6;
@@ -1190,15 +1341,23 @@ label {
   font-size: 14px;
 }
 
-.selectbox::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  right: 3px;
-  width: 20px;
-  height: 20px;
-  background: url(../images/icon_arrow_arrow_right.png) no-repeat 0 0;
-  background-size: contain;
+.selectbox.bordered {
+  border: 1px solid #eaebee;
+  border-radius: 5px;
+}
+
+.selectbox.bordered select {
+  padding: 0 30px 0 13px;
+}
+
+.selectbox.md::after {
+  top: 13px;
+}
+
+.selectbox.md select {
+  width: 100%;
+  height: 44px;
+  font-size: 14px;
 }
 
 .selectbox select {
@@ -1432,6 +1591,30 @@ label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.item-goods-assets.type2 {
+  padding: 20px;
+  background: #eaebee;
+  border-radius: 5px;
+}
+
+.item-goods-assets.type2 .tit {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.item-goods-assets.type2 .tbl-definition tbody tr:last-child th {
+  padding-bottom: 0;
+}
+
+.item-goods-assets.type2 .tbl-definition tbody th {
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+.item-goods-assets.type2 .tbl-definition tbody td {
+  font-size: 12px;
 }
 
 .item-goods.theme-dark {
@@ -1825,4 +2008,58 @@ label {
 
 .purchase-asset-group .inside-withdraw > .chkbox {
   margin: 22px 0;
+}
+
+/* ###############################
+    자산관리 (내역 보기)
+################################## */
+.asset-list-content .tbl-container {
+  height: calc(100vh - 185px);
+  margin-top: 16px;
+}
+
+.asset-list-content .tbl-container .tbl-striped {
+  width: 461px;
+}
+
+/* ###############################
+    자산관리 (락업 내역)
+################################## */
+.asset-lock-content .item-goods-assets {
+  margin: 15px 0;
+}
+
+.asset-lock-content .sticky-scroll {
+  height: calc(100vh - 302px);
+}
+
+/* ###############################
+    미디어쿼리
+################################## */
+@media (min-width: 550px) {
+  /* custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+  }
+  /* 자산관리 > 락업내역 탭 */
+  .purchase-asset-group > .breakdown-con .sticky-scroll .tbl-striped,
+  .purchase-asset-group > .lockup-con .sticky-scroll .tbl-striped {
+    width: 100%;
+  }
+  /* 자산관리(내역보기) */
+  .asset-list-content .sticky-scroll .tbl-striped {
+    width: 100%;
+  }
 }

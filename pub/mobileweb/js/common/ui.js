@@ -17,6 +17,23 @@ const cmmnUi = {
   init () {
     cmmnUi.btnGroupTab();
     cmmnUi.toggleSwitch();
+    cmmnUi.modalPopup();
+  },
+  modalPopup () { // 모달 팝업
+    // 모달 팝업 호출 이벤트
+    $(document).on('click', '.btn-modal-call', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $hash = $this.attr('href');
+      $($hash).fadeIn(200);
+    });
+
+    // 모달 팝업 닫기 이벤트
+    $(document).on('click', '.btn-modal-close', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      $this.closest('.modal').fadeOut(200);
+    });
   },
   btnGroupTab () { // 구매/자산관리 탭 메뉴
     var $targetBtnGroup = $('.purchase-asset-group > .btn-group');
