@@ -500,6 +500,17 @@ label {
   background: #fff;
 }
 
+.btn-block.bordered.arrow-right::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 9px;
+  margin: -3px 0 0 13px;
+  vertical-align: middle;
+  background: url(../images/icon_arrow_right_green.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 .btn-block.sm {
   line-height: 29px;
   color: #727e8b;
@@ -1327,7 +1338,7 @@ label {
   right: 3px;
   width: 20px;
   height: 20px;
-  background: url(../images/icon_arrow_arrow_right.png) no-repeat 0 0;
+  background: url(../images/icon_arrow_right.png) no-repeat 0 0;
   background-size: contain;
 }
 
@@ -1615,6 +1626,26 @@ label {
 
 .item-goods-assets.type2 .tbl-definition tbody td {
   font-size: 12px;
+}
+
+.item-goods.mining {
+  background: #000;
+}
+
+.item-goods.mining .tit {
+  color: #fefffe;
+}
+
+.item-goods.mining .tbl-definition tbody th {
+  color: #bbb;
+}
+
+.item-goods.mining .tbl-definition tbody td {
+  color: #fefffe;
+}
+
+.item-goods.mining .btn-block {
+  background: #000;
 }
 
 .item-goods.theme-dark {

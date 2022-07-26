@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈 > 자산관리 (지갑관리)</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header only-tit">
+      <h1>자산관리 (지갑관리)</h1>
+    </header>
+    <div class="tab-container">
+      <a href="asset_manag1.html">일반 상품</a>
+      <a href="asset_manag2.html" class="active">마이닝 상품</a>
+    </div>
+    <main class="container sub type2">
+      <label class="chkbox c-gray">
+        <input type="checkbox">
+        <em>보유 코인만 보기</em>
+      </label>
+
+      <section class="item-goods mining">
+        <div class="lr-box item-goods-assets">
+          <em class="left tit">코인 A</em>
+          <div class="right tbl-container">
+            <table class="tbl-definition">
+              <colgroup>
+                <col style="width:65%;">
+                <col style="width:35%;">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>구매수량</th>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <th>나의 파워</th>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <th>나의 광부</th>
+                  <td>2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- //tbl-container -->
+        </div>
+        <!-- //item-goods-assets -->
+        
+        <a href="#" class="btn-block md bordered arrow-right active-deepgreen">마이닝 상세보기</a>
+      </section>
+    </main>
+    <nav class="nav">
+      <!-- 각 메뉴명+아이콘 활성화시 active클래스 추가 -->
+      <div class="main-menu">
+        <a href="#" class="icon-home">홈</a>
+        <a href="#" class="icon-person">추천링크</a>
+        <a href="#" class="icon-moneybag active">자산</a>
+        <a href="#" class="icon-counsel">1:1 문의</a>
+        <button type="button" class="all-menu">전체</button>
+      </div>
+      <!-- //main-menu -->
+    </nav>
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
