@@ -228,6 +228,11 @@ label {
   background: #f2f3f5;
 }
 
+.wrap > .container.sub.bg-woodsmoke {
+  background: #17171c;
+  border-color: #17171c;
+}
+
 .wrap > .container.sub.type2 {
   height: calc(100vh - 69px);
 }
@@ -541,6 +546,11 @@ label {
 
 .btn-block.active-deepgreen {
   background: #0289a6;
+}
+
+.btn-block.active-yellow {
+  background: #fecd6f;
+  color: #1a1a1a;
 }
 
 .btn-group {
@@ -869,6 +879,11 @@ label {
   margin-bottom: 5px;
   line-height: 16px;
   color: #727e8b;
+}
+
+.txt.large {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 /* filter box */
@@ -2062,6 +2077,294 @@ label {
 
 .asset-lock-content .sticky-scroll {
   height: calc(100vh - 302px);
+}
+
+/* ###############################
+    채굴농장
+################################## */
+.mining-farm > .txt {
+  padding: 13px 0 16px;
+  text-align: center;
+}
+
+.mining-farm .mine-play {
+  margin: 10px 0 8px;
+}
+
+.mining-farm.theme-dark .mine-info {
+  background: #000;
+}
+
+.mining-farm.theme-dark .mine-info ul:first-child {
+  border-color: #2f2f2f;
+}
+
+.mining-farm.theme-dark .mine-info ul li em {
+  color: #bbb;
+}
+
+.mining-farm.theme-dark .mine-info ul li span {
+  color: #fff;
+}
+
+.mining-farm.theme-dark .mine-play {
+  background: #000;
+}
+
+.mining-farm.theme-dark .mine-play .left .tit {
+  color: #bbb;
+}
+
+.mining-farm.theme-dark .mine-play .left .num {
+  color: #fff;
+}
+
+.mining-farm.theme-dark .mine-play .left .num.color {
+  color: #ffa800;
+}
+
+.mining-farm.theme-dark .mine-play .left .txt-star {
+  color: #727e8b;
+}
+
+.mining-farm.theme-dark .mining-afoot {
+  background: #000;
+}
+
+.mining-farm.theme-dark .mining-afoot .tit {
+  color: #fff;
+}
+
+.mining-farm.theme-dark .mining-condition-info span {
+  color: #bbb;
+}
+
+.mining-farm.theme-dark .mining-finish {
+  background: #000;
+}
+
+.mining-farm.theme-dark .mining-finish .tit {
+  color: #fff;
+}
+
+.mining-farm.theme-dark .mining-finish-result li:nth-child(1) span, .mining-farm.theme-dark .mining-finish-result li:nth-child(2) span {
+  color: #bbb;
+}
+
+.mine-info {
+  padding: 20px 15px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.mine-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mine-info ul:first-child {
+  margin-bottom: 15px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8ecf7;
+}
+
+.mine-info ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.mine-info ul li em {
+  display: block;
+  margin-bottom: 4px;
+  color: #727e8b;
+}
+
+.mine-info ul li span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mine-play {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0 22px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.mine-play .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mine-play .left .tit {
+  line-height: 16px;
+  color: #727e8b;
+}
+
+.mine-play .left .num {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mine-play .left .num.color {
+  color: #ffa800;
+}
+
+.mine-play .left .txt-star {
+  margin-top: 13px;
+  padding-left: 9px;
+  text-indent: -9px;
+  line-height: 16px;
+  color: #bbb;
+}
+
+.mine-play .btn-block {
+  min-width: 73px;
+}
+
+.mining-afoot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px -20px 25px;
+  padding: 25px;
+  background: #fff;
+}
+
+.mining-afoot .tit {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mining-condition {
+  -webkit-box-flex: 1.7;
+      -ms-flex: 1.7;
+          flex: 1.7;
+  text-align: center;
+}
+
+.mining-condition img {
+  width: 75px;
+}
+
+.mining-condition-num {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffa800;
+}
+
+.mining-condition-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mining-condition-info span {
+  display: block;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: right;
+  color: #727e8b;
+}
+
+.mining-condition-info .date-time {
+  margin-top: 3px;
+}
+
+.mining-finish {
+  margin: 0 -20px;
+  padding: 30px 25px;
+  background: #fff;
+}
+
+.mining-finish .tit {
+  margin-bottom: 33px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.mining-finish-result ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mining-finish-result ul + ul {
+  margin-top: 30px;
+}
+
+.mining-finish-result ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mining-finish-result ul li:nth-child(2) {
+  text-align: center;
+}
+
+.mining-finish-result ul li:last-child {
+  text-align: right;
+}
+
+.mining-finish-result ul li:last-child span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffa800;
+}
+
+.mining-finish-result ul li span {
+  display: block;
+  line-height: 16px;
+  color: #727e8b;
+}
+
+.mining-finish-result ul li span:first-child {
+  margin-bottom: 3px;
 }
 
 /* ###############################
