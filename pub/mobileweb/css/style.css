@@ -174,6 +174,11 @@ label {
   overflow: hidden;
 }
 
+/* size */
+.w100 {
+  width: 100% !important;
+}
+
 /* align */
 .txt-right {
   text-align: right !important;
@@ -1376,6 +1381,11 @@ label {
   padding: 0 30px 0 13px;
 }
 
+.selectbox.align-right select {
+  padding-right: 26px;
+  text-align: right;
+}
+
 .selectbox.md::after {
   top: 13px;
 }
@@ -1387,6 +1397,8 @@ label {
 }
 
 .selectbox select {
+  position: relative;
+  z-index: 1;
   width: 87px;
   height: 30px;
 }
@@ -1572,6 +1584,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
   background: #fff;
@@ -1581,7 +1594,7 @@ label {
 
 .item-goods.sold-out .btn-group {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .item-goods.sold-out .btn-group .btn-block {
@@ -1705,6 +1718,19 @@ label {
 
 .item-goods.theme-dark .input-labeled input::placeholder {
   color: #727e8b;
+}
+
+.item-goods.theme-dark .input-labeled .selectbox select {
+  color: #fefffe;
+}
+
+.item-goods.theme-dark .input-labeled .selectbox select option {
+  color: #1a1a1a;
+}
+
+.item-goods.theme-dark .input-labeled .selectbox::after {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .item-goods.theme-dark .btn-block {
