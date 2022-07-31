@@ -15,9 +15,21 @@ $(function(){
 
 const cmmnUi = {
   init () {
+    cmmnUi.accordion();
+    cmmnUi.modalPopup();
     cmmnUi.btnGroupTab();
     cmmnUi.toggleSwitch();
-    cmmnUi.modalPopup();
+  },
+  accordion () { // 아코디언
+    $(document).on('click', '[data-accordion="target"]', function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $accordionContent= $this.closest('li').find('[data-accordion="content"]');
+      $('[data-accordion="content"]').slideUp(150);
+      if ($accordionContent.css('display') === 'none') {
+        $accordionContent.slideToggle(150);
+      }
+    });
   },
   modalPopup () { // 모달 팝업
     // 모달 팝업 호출 이벤트

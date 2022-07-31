@@ -43,11 +43,20 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legen
           box-sizing: border-box;
 }
 
-input, select, textarea {
+input, select {
   width: 100%;
   font-size: 100%;
   border: 0;
   background: transparent;
+  font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
+}
+
+textarea {
+  width: 100%;
+  font-size: 100%;
+  border: 0;
+  background: transparent;
+  resize: none;
   font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
 }
 
@@ -231,6 +240,10 @@ label {
   padding: 22px 20px;
   border-top: 1px solid #d8d8d8;
   background: #f2f3f5;
+}
+
+.wrap > .container.sub.bg-white {
+  background: #fff;
 }
 
 .wrap > .container.sub.bg-woodsmoke {
@@ -637,6 +650,22 @@ label {
   background-size: contain;
 }
 
+.btn-group-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn-close::before {
   content: "\00d7";
   display: block;
@@ -661,6 +690,16 @@ label {
 .btn-search.c-green {
   background: url(../images/icon_search_green.png) no-repeat 0 0;
   background-size: contain;
+}
+
+.btn-txt {
+  color: #727e8b;
+}
+
+.btn-txt:not(:first-child)::before {
+  content: "ㅣ";
+  display: inline-block;
+  margin: 0 3px;
 }
 
 .tbl-container.sticky-scroll {
@@ -1004,6 +1043,65 @@ label {
   color: #bbb;
 }
 
+.list-inquiry li + li .question-box {
+  padding-top: 23px;
+}
+
+.list-inquiry .date {
+  margin-left: 7px;
+  color: #bbb;
+}
+
+.list-inquiry .question-box {
+  padding: 0 25px 0 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.list-inquiry .question-txt {
+  position: relative;
+  display: block;
+  margin: 13px 0 23px;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.list-inquiry .question-txt::before {
+  content: "Q";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0289a6;
+}
+
+.list-inquiry .answer-box {
+  display: none;
+  padding: 15px 25px;
+  line-height: 20px;
+  color: #595959;
+  font-weight: 500;
+  background: #f1f2f4;
+}
+
+.list-inquiry .answer-box .inner {
+  position: relative;
+  overflow-y: overlay;
+  max-height: 180px;
+  padding-left: 18px;
+}
+
+.list-inquiry .answer-box .inner::before {
+  content: "A";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 500;
+  color: #595959;
+}
+
 /* icon */
 .icon-home::before {
   content: "";
@@ -1115,6 +1213,22 @@ label {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+
+/* 뱃지 */
+.badge-radius {
+  padding: 5px 10px;
+  border-radius: 14.5px;
+  font-size: 11px;
+}
+
+.badge-radius.bg-iceberg {
+  background: #d9eef2;
+}
+
+.badge-radius.bg-deepgreen {
+  color: #fff;
+  background: #0289a6;
 }
 
 /* input */
@@ -1401,6 +1515,30 @@ label {
   z-index: 1;
   width: 87px;
   height: 30px;
+}
+
+/* textarea */
+.textarea {
+  padding: 20px 15px;
+  border: 1px solid #eaebee;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.textarea::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.textarea:-ms-input-placeholder {
+  color: #bbb;
+}
+
+.textarea::-ms-input-placeholder {
+  color: #bbb;
+}
+
+.textarea::placeholder {
+  color: #bbb;
 }
 
 /* toggle switch */
@@ -2391,6 +2529,26 @@ label {
 
 .mining-finish-result ul li span:first-child {
   margin-bottom: 3px;
+}
+
+/* ###############################
+    고객센터
+################################## */
+.indiv-inquiry {
+  padding-top: 13px;
+}
+
+.indiv-inquiry .input-basic-group .input-basic em {
+  margin-bottom: 0;
+}
+
+.indiv-inquiry .textarea {
+  height: 211px;
+  margin: 30px 0;
+}
+
+.my-inquiry {
+  margin: 0 -20px;
 }
 
 /* ###############################
