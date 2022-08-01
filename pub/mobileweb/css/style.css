@@ -234,6 +234,10 @@ label {
   width: 100%;
 }
 
+.wrap > .container.scroll-y {
+  overflow-y: auto;
+}
+
 .wrap > .container.sub {
   overflow-y: overlay;
   height: calc(100vh - 98px);
@@ -1088,7 +1092,7 @@ label {
 
 .list-inquiry .answer-box .inner {
   position: relative;
-  overflow-y: overlay;
+  overflow-y: auto;
   max-height: 180px;
   padding-left: 18px;
 }
@@ -1100,6 +1104,35 @@ label {
   left: 0;
   font-weight: 500;
   color: #595959;
+}
+
+.list-board-tit {
+  display: block;
+  width: 100%;
+  padding: 23px 25px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.list-board-tit .num {
+  margin-right: 8px;
+  color: #0289a6;
+}
+
+.list-board-answer {
+  display: none;
+  padding: 15px 25px 15px 43px;
+  line-height: 20px;
+  color: #595959;
+  font-weight: 500;
+  background: #f1f2f4;
+}
+
+.list-board-answer .inner {
+  overflow-y: auto;
+  max-height: 180px;
 }
 
 /* icon */
