@@ -706,6 +706,10 @@ label {
   margin: 0 3px;
 }
 
+.tbl-container {
+  border-bottom: 1px solid #014655;
+}
+
 .tbl-container.sticky-scroll {
   overflow: auto;
 }
@@ -968,6 +972,19 @@ label {
   -ms-flex-preferred-size: 67px;
       flex-basis: 67px;
   line-height: 42px !important;
+}
+
+.filter-selectbox.type2 .selectbox {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  min-width: 93px;
+}
+
+.filter-selectbox.type2 input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* 리스트 */
@@ -1265,6 +1282,10 @@ label {
 }
 
 /* input */
+input.md {
+  height: 44px;
+}
+
 .input-basic {
   position: relative;
 }
@@ -1426,6 +1447,12 @@ label {
 
 .input-labeled input::placeholder {
   color: #cccfd9;
+}
+
+.input-bordered {
+  padding: 0 13px;
+  border: 1px solid #eaebee;
+  border-radius: 5px;
 }
 
 .input-basic-group {
@@ -2585,12 +2612,38 @@ label {
 }
 
 /* ###############################
+    입출금 내역
+################################## */
+.trade-list-content .filter-selectbox.last {
+  margin: 10px 0 16px;
+}
+
+.trade-list-content .filter-selectbox.last .selectbox:first-child {
+  min-width: 142px;
+}
+
+.trade-list-content .filter-selectbox.last .btn-block {
+  font-size: 14px;
+}
+
+.trade-list-content .tbl-container {
+  height: calc(100vh - 240px);
+}
+
+.trade-list-content .tbl-striped {
+  width: 800px;
+}
+
+/* ###############################
     미디어쿼리
 ################################## */
 @media (min-width: 550px) {
   /* custom scrollbar */
   ::-webkit-scrollbar {
+    /* 세로 스크롤바 너비 */
     width: 20px;
+    /* 가로 스크롤바 너비 */
+    height: 20px;
   }
   ::-webkit-scrollbar-track {
     background-color: transparent;
