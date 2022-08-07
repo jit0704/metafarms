@@ -1317,6 +1317,7 @@ input.md {
   padding: 0 32px 9px 0;
   font-size: 14px;
   border-bottom: 1px solid #d6d6d6;
+  border-radius: 0;
 }
 
 .input-basic input::-webkit-input-placeholder {
@@ -2125,11 +2126,18 @@ input.md {
 .join {
   overflow-y: auto;
   height: calc(100vh - 102px);
-  padding: 25px 25px 0;
+  padding: 25px 25px 102px;
 }
 
 .join-term {
   padding: 20px 0 45px;
+}
+
+.join-wrap .btn-block {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  max-width: 550px;
 }
 
 /* ###############################
@@ -2665,5 +2673,13 @@ input.md {
   /* 자산관리(내역보기) */
   .asset-list-content .sticky-scroll .tbl-striped {
     width: 100%;
+  }
+}
+
+/* iOS only */
+@supports (-webkit-touch-callout: none) {
+  .wrap,
+  .container {
+    height: -webkit-fill-available;
   }
 }
