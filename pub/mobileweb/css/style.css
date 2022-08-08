@@ -171,6 +171,16 @@ label {
   src: local("Spoqa Han Sans Neo Thin"), url("../font/SpoqaHanSansNeo-Thin.woff") format("woff");
 }
 
+/* background-image 미리 로드 */
+body::after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  content: url(../images/main/btn_main_product.png) url(../images/main/btn_main_product_active.png) url(../images/main/btn_main_mining.png) url(../images/main/btn_main_mining_active.png) url(../images/main/btn_main_nfc.png) url(../images/main/btn_main_nfc_active.png) url(../images/main/btn_main_defi.png) url(../images/main/btn_main_defi_active.png) url(../images/main/btn_main_otp.png) url(../images/main/btn_main_otp_active.png) url(../images/main/btn_main_guide.png) url(../images/main/btn_main_guide_active.png);
+}
+
 /* ###############################
     전역 class 정의
 ################################## */
@@ -257,6 +267,7 @@ label {
 
 .wrap > .container.sub.type2 {
   height: calc(100vh - 69px);
+  padding-bottom: 128px;
 }
 
 .wrap > .container.sub.type3 {
@@ -270,7 +281,11 @@ label {
     GNB 정의
 ################################## */
 .nav {
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  max-width: 550px;
+  border-radius: 16px 16px 0 0;
   background: #f2f3f5;
 }
 
@@ -874,6 +889,20 @@ label {
   font-weight: 500;
 }
 
+.logo {
+  width: 100%;
+  padding: 12px 0 16px;
+  background: #000;
+}
+
+.logo h1 {
+  width: 133px;
+  height: 19px;
+  margin: 0 auto;
+  background: url(../images/logo.png) no-repeat 0 0;
+  background-size: contain;
+}
+
 /* 다국어 */
 .lang-choice button {
   display: block;
@@ -1279,6 +1308,11 @@ label {
 .badge-radius.bg-deepgreen {
   color: #fff;
   background: #0289a6;
+}
+
+.badge-radius.bg-gray {
+  color: #fff;
+  background: #444b52;
 }
 
 /* input */
@@ -2059,6 +2093,203 @@ input.md {
   text-align: center;
 }
 
+/* swiper */
+.swiper-visual .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-visual .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 13px;
+}
+
+.swiper-visual .swiper-pagination {
+  padding-right: 13px;
+  text-align: right;
+}
+
+.swiper-visual .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: #727e8b;
+  opacity: 1;
+}
+
+.swiper-visual .swiper-pagination-bullet-active {
+  width: 19px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.notice-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 7px;
+  height: 37px;
+  padding: 7px 20px;
+  background: #1f2429;
+}
+
+.notice-slide .swiper-notice {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 14px;
+}
+
+.notice-slide .swiper-notice .swiper-slide {
+  overflow: hidden;
+  width: 92%;
+  padding-right: 20px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.notice-slide .swiper-notice .swiper-slide::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arrow_right.png) no-repeat 0 0;
+  background-size: contain;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+/* ###############################
+    메인
+################################## */
+.main {
+  padding-bottom: 134px;
+  background: #000;
+}
+
+.main .swiper-visual {
+  margin-bottom: 7px;
+}
+
+.main .large-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 7px;
+  padding: 28px 25px;
+}
+
+.main .large-menu a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 48%;
+          flex: 1 0 48%;
+  padding-top: 59%;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  -webkit-transition: background-image 0.1s;
+  transition: background-image 0.1s;
+}
+
+.main .large-menu .menu-product {
+  background-image: url(../images/main/btn_main_product.png);
+}
+
+.main .large-menu .menu-product:active {
+  background-image: url(../images/main/btn_main_product_active.png);
+}
+
+.main .large-menu .menu-mining {
+  background-image: url(../images/main/btn_main_mining.png);
+}
+
+.main .large-menu .menu-mining:active {
+  background-image: url(../images/main/btn_main_mining_active.png);
+}
+
+.main .large-menu .menu-nfc {
+  background-image: url(../images/main/btn_main_nfc.png);
+}
+
+.main .large-menu .menu-nfc:active {
+  background-image: url(../images/main/btn_main_nfc_active.png);
+}
+
+.main .large-menu .menu-defi {
+  background-image: url(../images/main/btn_main_defi.png);
+}
+
+.main .large-menu .menu-defi:active {
+  background-image: url(../images/main/btn_main_defi_active.png);
+}
+
+.main .large-menu .menu-otp {
+  padding-top: 21%;
+  background-image: url(../images/main/btn_main_otp.png);
+}
+
+.main .large-menu .menu-otp:active {
+  background-image: url(../images/main/btn_main_otp_active.png);
+}
+
+.main .large-menu .menu-guide {
+  padding-top: 21%;
+  background-image: url(../images/main/btn_main_guide.png);
+}
+
+.main .large-menu .menu-guide:active {
+  background-image: url(../images/main/btn_main_guide_active.png);
+}
+
+.main .about {
+  padding: 38px 25px;
+  background: #1f2429;
+}
+
+.main .about .tit {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #fefffe;
+  font-weight: 300;
+}
+
+.main .about .tit em {
+  font-weight: 700;
+}
+
+.main .about-content {
+  line-height: 18px;
+  font-size: 14px;
+  color: #fefffe;
+  font-weight: 300;
+}
+
 /* ###############################
     로그인
 ################################## */
@@ -2664,6 +2895,28 @@ input.md {
   }
   ::-webkit-scrollbar-thumb:hover {
     background-color: #a8bbbf;
+  }
+  /* 메인 */
+  .main .large-menu .menu-product:hover {
+    background-image: url(../images/main/btn_main_product_active.png);
+  }
+  .main .large-menu .menu-mining:hover {
+    background-image: url(../images/main/btn_main_mining_active.png);
+  }
+  .main .large-menu .menu-nfc:hover {
+    background-image: url(../images/main/btn_main_nfc_active.png);
+  }
+  .main .large-menu .menu-defi:hover {
+    background-image: url(../images/main/btn_main_defi_active.png);
+  }
+  .main .large-menu .menu-otp:hover {
+    background-image: url(../images/main/btn_main_otp_active.png);
+  }
+  .main .large-menu .menu-guide:hover {
+    background-image: url(../images/main/btn_main_guide_active.png);
+  }
+  .main .notice-slide .swiper-notice .swiper-slide {
+    width: 95%;
   }
   /* 자산관리 > 락업내역 탭 */
   .purchase-asset-group > .breakdown-con .sticky-scroll .tbl-striped,
