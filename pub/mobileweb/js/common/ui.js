@@ -6,7 +6,7 @@ $(function(){
     var includeHtml = $('[include-html]').attr('data-title');
     setTimeout(function(){
       $('#header-title').text(includeHtml);
-    }, 10);
+    }, 100);
   }
 
   // ui 인터렉션 호출

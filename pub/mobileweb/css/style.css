@@ -141,6 +141,10 @@ label {
   cursor: pointer;
 }
 
+hr {
+  border: 0;
+}
+
 @font-face {
   font-family: "Spoqa Han Sans Neo";
   font-weight: 700;
@@ -210,6 +214,10 @@ body::after {
 /* margin */
 .mgb63 {
   margin-bottom: 63px !important;
+}
+
+.mgt0 {
+  margin-top: 0 !important;
 }
 
 /* padding */
@@ -1051,6 +1059,28 @@ body::after {
   background-size: contain;
 }
 
+.btn-link {
+  position: relative;
+  display: block;
+  line-height: 72px;
+  font-size: 14px;
+}
+
+.btn-link::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_arrow_right.png) no-repeat 0 0;
+  background-size: contain;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .tbl-container {
   border-bottom: 1px solid #014655;
 }
@@ -1169,6 +1199,12 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+/* 구분선 */
+.divider {
+  height: 10px;
+  background: #eaebee;
 }
 
 /* header 공통 */
@@ -1622,6 +1658,68 @@ body::after {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+}
+
+.icon-exclamation {
+  color: #6e6e6e;
+}
+
+.icon-exclamation::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  background-image: url("../images/icon_exclamation_mark.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 7px 0 0;
+  vertical-align: middle;
+}
+
+.icon-step {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.icon-step.one {
+  color: #e63312;
+}
+
+.icon-step.one::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 32px;
+  margin: 0 auto;
+  background-image: url("../images/icon_shield_safe_red.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 7px 0 0;
+  vertical-align: middle;
+}
+
+.icon-step.two {
+  color: #0289a6;
+}
+
+.icon-step.two::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 32px;
+  margin: 0 auto;
+  background-image: url("../images/icon_shield_safe_skyblue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: inline-block;
+  margin: 0 7px 0 0;
+  vertical-align: middle;
 }
 
 /* 뱃지 */
@@ -3201,6 +3299,39 @@ input.md {
 
 .trade-list-content .tbl-striped {
   width: 800px;
+}
+
+/* ###############################
+    개인정보 관리
+################################## */
+.personal-info-manage .divider {
+  margin: 22px -20px 0;
+}
+
+.manage-step {
+  padding: 35px 0;
+}
+
+.manage-step .tit {
+  display: block;
+  font-size: 14px;
+  color: #727e8b;
+  text-align: center;
+}
+
+.manage-step .icon-step {
+  display: block;
+  margin: 7px 0 30px;
+  text-align: center;
+}
+
+.manage-step .btn-block.md {
+  line-height: 45px;
+}
+
+.manage-step .icon-exclamation {
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* ###############################
