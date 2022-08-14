@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+  <title>인증단계</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header center" include-html="/pub/mobileweb/html/common/header.html" data-title="인증단계"></header>
+    <main class="container sub type3">
+      <div class="confirm-step">
+        <div class="manage-step">
+          <span class="tit">김메타님 인증단계</span>
+          <em class="icon-step one">1단계</em>
+        </div>
+        <!-- //manage-step -->
+
+        <section class="confirm-step-current">
+          <div class="step1">
+            <span class="icon-circle-gray">
+              <i>1단계</i>
+              <em>이메일 인증</em>
+            </span>
+            <div class="info">
+              <span class="way">metacave@hpx.com</span>
+              <p class="icon-exclamation2">인증된 이메일 주소는 변경될 수 없습니다.</p>
+            </div>
+          </div>
+          <!-- //step1 -->
+          <div class="step2">
+            <span class="icon-circle-blue">
+              <i>2단계</i>
+              <em>OTP 인증</em>
+            </span>
+            <div class="info">
+              <span class="way">2중 보안으로 안전한 거래 가능</span>
+              <p class="icon-exclamation2">OTP를 잃어버린 경우 복구는 어렵습니다.</p>
+            </div>
+          </div>
+          <!-- //step2 -->
+          <a href="#" class="btn-block md active">OTP 인증하기</a>
+        </section>
+        <!-- //confirm_step_current -->
+      </div>
+      <!-- //confirm_step -->
+    </main>
+  </div>
+  <!-- //wrap -->
+</body>
+</html>

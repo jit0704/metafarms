@@ -145,6 +145,11 @@ hr {
   border: 0;
 }
 
+i {
+  display: inline-block;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Spoqa Han Sans Neo";
   font-weight: 700;
@@ -1676,6 +1681,44 @@ body::after {
   background-size: contain;
   display: inline-block;
   margin: 0 7px 0 0;
+  vertical-align: middle;
+}
+
+.icon-exclamation2::before {
+  content: "!";
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+  color: #6e6e6e;
+}
+
+.icon-circle-gray::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  background-image: url("../images/icon_circle_check_gray.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.icon-circle-blue::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+  background-image: url("../images/icon_circle_check.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  display: inline-block;
+  margin: 0;
   vertical-align: middle;
 }
 
@@ -3332,6 +3375,67 @@ input.md {
 .manage-step .icon-exclamation {
   margin-top: 10px;
   text-align: center;
+}
+
+/* ###############################
+    인증 단계
+################################## */
+.confirm-step .manage-step {
+  margin-bottom: 48px;
+  padding: 22px 0;
+  border-radius: 5px;
+  background: #f1f2f4;
+}
+
+.confirm-step .manage-step .icon-step {
+  margin-bottom: 0;
+}
+
+.confirm-step-current [class*="icon-circle"] i {
+  margin: 0 5px 0 10px;
+}
+
+.confirm-step-current [class*="icon-circle"] em {
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.confirm-step-current .info .way {
+  font-size: 14px;
+}
+
+.confirm-step-current .info .way::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  margin-right: 5px;
+  background: #1a1a1a;
+  vertical-align: middle;
+}
+
+.confirm-step-current .info .icon-exclamation2 {
+  margin-top: 3px;
+  line-height: 16px;
+  color: #727e8b;
+}
+
+.confirm-step-current .step1 .info {
+  min-height: 99px;
+  margin: 12px 0 12px 11px;
+  padding-left: 23px;
+  border-left: 2px solid #eaebee;
+}
+
+.confirm-step-current .step2 .info {
+  margin-top: 12px;
+  padding-left: 35px;
+}
+
+.confirm-step .btn-block {
+  margin-top: 20px;
+  line-height: 45px;
 }
 
 /* ###############################
