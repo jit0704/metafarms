@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+  <title>OTP 인증 (앱 설치 및 등록)</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header center" include-html="/pub/mobileweb/html/common/header.html" data-title="OTP 인증 (앱 설치 및 등록)"></header>
+    <main class="container sub type3">
+      <div class="otp-certi">
+        <ol class="otp-certi-current">
+          <li>
+            <span class="tit">
+              <i class="circle-number">1</i>
+              <em>Google OTP 인증 앱을 스마트폰에 설치</em>
+            </span>
+            <div class="otp-certi-content">
+              <p class="txt">Google Play에선 ‘Google OTP’, APP store에선 ‘Google Authenticator’ 앱을 설치하시기 바랍니다.</p>
+              <div class="btn-group">
+                <a href="#" class="btn-store apple">App Store</a>
+                <a href="#" class="btn-store google">Google Play</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="tit">
+              <i class="circle-number">2</i>
+              <em>앱 실행 후 OTP 키 생성</em>
+            </span>
+            <div class="otp-certi-qr">
+              <img src="../images/temp/@qr_code.png" alt="QRCODE 이미지">
+              <div class="qrcode-key">
+                <span>KQZXM3ZFNZXXWYZK</span>
+                <button type="button" class="btn-copy2">
+                  <span class="blind">key값 복사하기</span>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ol>
+        <!-- //otp-certi-current -->
+        <a href="#" class="btn-block large bdr-radius-none active">다음</a>
+      </div>
+      <!-- //otp-certi -->
+    </main>
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
