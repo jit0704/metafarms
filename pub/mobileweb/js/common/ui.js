@@ -51,7 +51,11 @@ const cmmnUi = {
     $(document).on('click', '.btn-modal-close', function (e) {
       e.preventDefault();
       var $this = $(this);
-      $this.closest('.modal').fadeOut(200);
+      if ($this.closest('.modal').is('.modal')) {
+        $this.closest('.modal').fadeOut(200);
+      } else {
+        $this.closest('.modal-full').fadeOut(200);
+      }
     });
   },
   btnGroupTab () { // 구매/자산관리 탭 메뉴

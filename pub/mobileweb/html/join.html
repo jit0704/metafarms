@@ -96,12 +96,70 @@
       <section class="join-term">
         <label class="chkbox">
           <input type="checkbox">
-          <em>회원 약관 동의</em>
+          <em>약관 전체 동의</em>
         </label>
+        <ul class="child">
+          <li>
+            <label class="chkbox type2">
+              <input type="checkbox">
+              <em>이용약관</em>
+            </label>
+            <a href="#term-pop1" class="btn-modal-call pop-full"><span class="blind">이용약관</span></a>
+          </li>
+          <li>
+            <label class="chkbox type2">
+              <input type="checkbox">
+              <em>개인정보처리방침</em>
+            </label>
+            <a href="#term-pop2" class="btn-modal-call pop-full"><span class="blind">개인정보처리방침</span></a>
+          </li>
+        </ul>
       </section>
     </main>
     <a href="#" class="btn-block large bdr-radius-none">회원가입</a> <!-- active 클래스 추가시 버튼 활성화 디자인 -->
   </div>
   <!-- //wrap -->
+
+  <div id="term-pop1" class="modal-full">
+    <header class="modal-full-header">
+      <h2>이용약관</h2>
+      <button type="button" class="btn-close lg btn-modal-close"><span class="blind">팝업 닫기</span></button>
+    </header>
+    <div class="modal-full-container">
+      <span class="selectbox md bordered">
+        <select>
+          <option>2022.06.17</option>
+          <option>2022.07.17</option>
+          <option>2022.08.17</option>
+        </select>
+      </span>
+      <div class="modal-full-content">
+        내용이 들어갑니다..
+      </div>
+    </div>
+    <!-- //modal-full-container -->
+  </div>
+  <!-- //modal-full -->
+
+  <div id="term-pop2" class="modal-full">
+    <header class="modal-full-header">
+      <h2>개인정보처리방침</h2>
+      <button type="button" class="btn-close lg btn-modal-close"><span class="blind">팝업 닫기</span></button>
+    </header>
+    <div class="modal-full-container">
+      <span class="selectbox md bordered">
+        <select>
+          <option>2022.06.17</option>
+          <option>2022.07.17</option>
+          <option>2022.08.17</option>
+        </select>
+      </span>
+      <div class="modal-full-content">
+        내용이 들어갑니다..222
+      </div>
+    </div>
+    <!-- //modal-full-container -->
+  </div>
+  <!-- //modal-full -->
 </body>
 </html>

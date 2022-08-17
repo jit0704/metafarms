@@ -79,6 +79,7 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  color: #1a1a1a;
 }
 
 table {
@@ -819,6 +820,66 @@ body::after {
   text-align: center;
 }
 
+.modal-full {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.modal-full-header {
+  position: relative;
+}
+
+.modal-full-header h2 {
+  line-height: 50px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.modal-full-header .btn-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.modal-full-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: calc(100% - 50px);
+  padding: 14px 20px 20px;
+  gap: 22px 0;
+}
+
+.modal-full-container .selectbox {
+  width: 100%;
+}
+
+.modal-full-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
 /* 버튼 */
 .btn-back {
   width: 50px;
@@ -1028,6 +1089,11 @@ body::after {
 .btn-close.xs::before {
   line-height: 14px;
   font-size: 14px;
+}
+
+.btn-close.lg::before {
+  line-height: 50px;
+  font-size: 30px;
 }
 
 .btn-close.c-red::before {
@@ -2071,6 +2137,18 @@ input.md {
   color: #1a1a1a;
 }
 
+.chkbox.type2 em::before {
+  border: 0;
+  background: url(../images/icon_chk_disabled.png) no-repeat 50% 50%;
+  background-size: 16px;
+}
+
+.chkbox.type2 input:checked + em::before {
+  border: 0;
+  background: url(../images/icon_chk.png) no-repeat 50% 50%;
+  background-size: 14px 10px;
+}
+
 /* 셀렉트 박스 */
 .selectbox {
   position: relative;
@@ -2878,6 +2956,35 @@ input.md {
 
 .join-term {
   padding: 20px 0 45px;
+}
+
+.join-term > .chkbox em {
+  color: #1a1a1a;
+}
+
+.join-term .child {
+  margin-top: 18px;
+  padding-left: 28px;
+}
+
+.join-term .child li {
+  position: relative;
+}
+
+.join-term .child li + li {
+  margin-top: 7px;
+}
+
+.join-term .child li a {
+  position: absolute;
+  left: 28px;
+  top: 0;
+  width: calc(100% - 28px);
+  height: 20px;
+}
+
+.join-term .child .chkbox em {
+  text-decoration: underline;
 }
 
 .join-wrap .btn-block {
