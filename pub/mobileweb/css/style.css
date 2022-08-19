@@ -1288,6 +1288,151 @@ body::after {
 }
 
 /* ###############################
+    DateRangePicker style custom
+################################## */
+.date-picker-wrapper {
+  left: 0 !important;
+  right: 0;
+  z-index: 3;
+  padding: 0 !important;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.05);
+          box-shadow: 0 9px 15px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaebee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", Helvetica, sans-serif;
+}
+
+.date-picker-wrapper .month-wrapper {
+  padding: 22px 10px 37px;
+  border: 0;
+  border-radius: 0;
+}
+
+.date-picker-wrapper .month-wrapper table {
+  width: 100%;
+}
+
+.date-picker-wrapper .month-wrapper table thead .caption {
+  height: auto;
+}
+
+.date-picker-wrapper .month-wrapper table thead .caption th:first-of-type,
+.date-picker-wrapper .month-wrapper table thead .caption th:last-of-type {
+  position: relative;
+  height: 50px;
+  line-height: 0;
+}
+
+.date-picker-wrapper .month-wrapper table thead .caption .month-element {
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+}
+
+.date-picker-wrapper .month-wrapper table thead .caption .prev {
+  position: absolute;
+  top: 0;
+  left: 45px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  font-size: 0;
+  background: url(../images/icon_arrow_right_gray.png) no-repeat 0 0;
+  background-size: contain;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.date-picker-wrapper .month-wrapper table thead .caption .next {
+  position: absolute;
+  top: 0;
+  right: 45px;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  font-size: 0;
+  background: url(../images/icon_arrow_right_gray.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.date-picker-wrapper .month-wrapper table thead .week-name th {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  color: #595959;
+}
+
+.date-picker-wrapper .month-wrapper table thead .week-name th:first-child {
+  color: #e63312;
+}
+
+.date-picker-wrapper .month-wrapper table thead .week-name th:last-child {
+  color: #1763b6;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td {
+  width: 40px;
+  height: 40px;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td:first-child .day {
+  color: #e63312 !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td:last-child .day {
+  color: #1763b6 !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td .day {
+  width: 40px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 40px;
+  border-radius: 100%;
+  font-size: 14px;
+  color: #1a1a1a !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td .day.checked {
+  width: 100%;
+  border-radius: 0;
+  color: #fff !important;
+  background: #ffdd9c !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td .day.checked.first-date-selected {
+  width: 40px;
+  border-radius: 100%;
+  color: #fff !important;
+  background: #ffa800 !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td .day.checked.last-date-selected {
+  width: 40px;
+  border-radius: 100%;
+  color: #fff !important;
+  background: #ffa800 !important;
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td.active-first-selected {
+  background: -webkit-gradient(linear, right top, left top, from(#ffdd9c), color-stop(67%, white));
+  background: linear-gradient(to left, #ffdd9c 0%, white 67%);
+}
+
+.date-picker-wrapper .month-wrapper table tbody tr td.active-last-selected {
+  background: -webkit-gradient(linear, left top, right top, from(#ffdd9c), color-stop(67%, white));
+  background: linear-gradient(to right, #ffdd9c 0%, white 67%);
+}
+
+/* ###############################
     공통 컴포넌트
 ################################## */
 /* 좌/우측 row 정렬 컴포넌트 */
@@ -3482,6 +3627,14 @@ input.md {
 /* ###############################
     입출금 내역
 ################################## */
+.trade-list-content .filter-selectbox.type2 {
+  position: relative;
+}
+
+.trade-list-content .filter-selectbox.type2 .input-bordered {
+  font-size: 14px;
+}
+
 .trade-list-content .filter-selectbox.last {
   margin: 10px 0 16px;
 }

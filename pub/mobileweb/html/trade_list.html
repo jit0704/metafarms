@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
   <title>입출금 내역</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/daterangepicker.min.css">
   <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
   <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
   <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/lib/moment.min.js"></script>
+  <script src="/pub/mobileweb/js/lib/jquery.daterangepicker.js"></script>
   <script src="/pub/mobileweb/js/common/ui.js"></script>
 </head>
 <body>
@@ -23,7 +26,7 @@
               <option>90일</option>
             </select>
           </span>
-          <input type="text" class="input-bordered md">
+          <input type="text" inputmode="none" id="date-range-picker" class="input-bordered md">
         </div>
         <!-- //filter-selectbox -->
         <div class="filter-selectbox last">
@@ -220,5 +223,52 @@
     </main>
   </div>
   <!-- //wrap -->
+
+  <script>
+    $(function(){
+      // date-range-picker initialization
+      $('#date-range-picker').dateRangePicker({
+        container: '.filter-selectbox.type2',
+        singleMonth: true,
+        showShortcuts: false,
+        showTopbar: false,
+        separator: ' ~ ',
+        language: 'ko'
+      })
+      .on('datepicker-first-date-selected', function(event, obj){
+        var filterSelectbox = event.currentTarget.closest('.filter-selectbox');
+        dateRangeSelected(filterSelectbox, false, true);
+      })
+      .on('datepicker-change', function(event, obj){
+        var filterSelectbox = event.currentTarget.closest('.filter-selectbox');
+        dateRangeSelected(filterSelectbox, true ,false);
+      })
+      .on('datepicker-opened', function(){
+        var filterSelectbox = $('.filter-selectbox.type2');
+        dateRangeSelected(filterSelectbox, true ,false);
+      });
+
+      // 이전달, 다음달 버튼 클릭시 선택된 날짜 custom class명 초기화
+      $('.month-wrapper .prev, .month-wrapper .next').on('click', function(){
+        var filterSelectbox = $('.filter-selectbox.type2');
+        dateRangeSelected(filterSelectbox, true ,false);
+        $('.month-wrapper tbody tr .lastMonth, .month-wrapper tbody tr .nextMonth').parent('[class*="active-"]').removeClass();
+      });
+
+      // date-range-picker 이벤트에 사용되는 DOM요소 재사용 함수
+      function dateRangeSelected ($filterSelectbox, activeAdd, activeRemove) {
+        var firstDateSelected = $($filterSelectbox).find('.first-date-selected').parent();
+        var lastDateSelected =  $($filterSelectbox).find('.last-date-selected').parent();
+        if (activeAdd) {
+          firstDateSelected.addClass('active-first-selected');
+          lastDateSelected.addClass('active-last-selected');
+        }
+        if (activeRemove) {
+          firstDateSelected.removeClass('active-first-selected');
+          lastDateSelected.removeClass('active-last-selected');
+        }
+      };
+    });
+  </script>
 </body>
 </html>
