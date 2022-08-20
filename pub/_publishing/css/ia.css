@@ -14,7 +14,7 @@
 .ia-section-header {padding:10px 20px; border:0; background-color:#444; color:#fff; cursor:pointer;}
 
 /* Accordion */
-.ia-section-ajax .ia-section-body {overflow:hidden;}
+/* .ia-section-ajax .ia-section-body {overflow:hidden;} */
 
 /* is-scrolled */
 .ia-content-header .ia-in-sec {transition:all 0.3s ease-out; -webkit-transition:all 0.3s ease-out 0s; -moz-transition:all 0.3s ease-out 0s; -o-transition:all 0.3s ease-out 0s;}
@@ -130,7 +130,7 @@ td.col-url a {border-bottom:1px solid #333;}
 .ia-tbl.type-history td {font-size:16px; line-height:24px; text-align:left; padding:10px 20px;}
 
 /* IA Tabs */
-.ia-tab-content {height:0; overflow:hidden;}
+.ia-tab-content {height:0; /*overflow:hidden;*/}
 .ia-tab-content.type-thumb.is-visible {height:auto;}
 .ia-tab-content.type-list.is-visible {height:auto;}
 
