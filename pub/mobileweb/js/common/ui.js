@@ -15,17 +15,10 @@ $(function(){
 
 const cmmnUi = {
   init () {
-    cmmnUi.dynamicAddClass();
     cmmnUi.accordion();
     cmmnUi.modalPopup();
     cmmnUi.btnGroupTab();
     cmmnUi.toggleSwitch();
-  },
-  dynamicAddClass () { // 특정 페이지 style 수정을 위해 body 밑의 부모 요소에 class추가
-    var $wrap = $('.wrap');
-    if ($('.join').length !== 0) {
-      $wrap.addClass('join-wrap');
-    }
   },
   accordion () { // 아코디언
     $(document).on('click', '[data-accordion="target"]', function (e) {
