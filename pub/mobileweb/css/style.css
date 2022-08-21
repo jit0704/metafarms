@@ -217,6 +217,10 @@ body::after {
 }
 
 /* margin */
+.mgb5 {
+  margin-bottom: 5px !important;
+}
+
 .mgb63 {
   margin-bottom: 63px !important;
 }
@@ -2953,6 +2957,95 @@ input.md {
   position: absolute;
   top: -4px;
   right: 0;
+}
+
+/* 약관 style정의 */
+.term-content {
+  line-height: 20px;
+}
+
+.term-content > section + section {
+  margin-top: 15px;
+}
+
+.term-content > section.apply {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.term-content .tit {
+  margin-bottom: 12px;
+  line-height: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.term-content .para + .para {
+  margin-top: 5px;
+}
+
+.term-content .para + .depth1 {
+  margin-top: 5px;
+}
+
+.term-content .ordered-list {
+  counter-reset: index 0;
+}
+
+.term-content .ordered-list > li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.term-content .ordered-list > li::before {
+  content: counter(index) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: index 1;
+}
+
+.term-content .ordered-list2 > li {
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.term-content .ordered-list2.depth2 {
+  margin: 5px 0;
+}
+
+.term-content .ordered-list2.depth2 > li {
+  padding-left: 25px;
+  text-indent: -20px;
+}
+
+.term-content .bracket-list {
+  counter-reset: index 0;
+}
+
+.term-content .bracket-list > li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.term-content .bracket-list > li::before {
+  content: "(" counter(index) ")";
+  position: absolute;
+  left: 0;
+  top: 0;
+  counter-increment: index 1;
+}
+
+.term-content .dash-list > li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.term-content .dash-list > li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* ###############################

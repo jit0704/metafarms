@@ -38,12 +38,14 @@ const cmmnUi = {
       var $this = $(this);
       var $hash = $this.attr('href');
       $($hash).fadeIn(200);
+      $('.wrap > .container').hide(); // 220821 추가
     });
 
     // 모달 팝업 닫기 이벤트
     $(document).on('click', '.btn-modal-close', function (e) {
       e.preventDefault();
       var $this = $(this);
+      $('.wrap > .container').show(); // 220821 추가
       if ($this.closest('.modal').is('.modal')) {
         $this.closest('.modal').fadeOut(200);
       } else {
