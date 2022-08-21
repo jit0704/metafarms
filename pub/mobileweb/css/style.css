@@ -1500,6 +1500,10 @@ body::after {
   background: #fff;
 }
 
+.header.bg-transparent {
+  background: transparent;
+}
+
 .header.center h1 {
   margin: 0 auto;
   padding-left: 0;
