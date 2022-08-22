@@ -260,6 +260,10 @@ body::after {
   border-color: #17171c;
 }
 
+.wrap > .container.sub.bg-woodsmoke .mining-farm.theme-dark > .txt {
+  color: #fff;
+}
+
 .wrap > .container.sub.type2 {
   min-height: 100vh;
   padding-bottom: 128px;
@@ -802,10 +806,10 @@ body::after {
 .modal-full {
   display: none;
   position: fixed;
-  left: 0;
   top: 0;
   z-index: 5;
   width: 100%;
+  max-width: 550px;
   height: 100%;
   background: #fff;
 }
@@ -2646,8 +2650,14 @@ input.md {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 0 40px;
+  gap: 0 20px;
   margin-bottom: 22px;
+}
+
+.item-goods-assets .left {
+  -ms-flex-preferred-size: 85px;
+      flex-basis: 85px;
+  word-break: break-all;
 }
 
 .item-goods-assets .right {

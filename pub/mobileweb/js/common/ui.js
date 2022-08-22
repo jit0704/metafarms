@@ -32,20 +32,22 @@ const cmmnUi = {
     });
   },
   modalPopup () { // 모달 팝업
+    var $container = $('.wrap > .container');
+
     // 모달 팝업 호출 이벤트
     $(document).on('click', '.btn-modal-call', function (e) {
       e.preventDefault();
       var $this = $(this);
       var $hash = $this.attr('href');
       $($hash).fadeIn(200);
-      $('.wrap > .container').hide(); // 220821 추가
+      $container.is('.join') && $container.hide();
     });
 
     // 모달 팝업 닫기 이벤트
     $(document).on('click', '.btn-modal-close', function (e) {
       e.preventDefault();
       var $this = $(this);
-      $('.wrap > .container').show(); // 220821 추가
+      $container.is('.join') && $container.show();
       if ($this.closest('.modal').is('.modal')) {
         $this.closest('.modal').fadeOut(200);
       } else {
