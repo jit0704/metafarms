@@ -333,7 +333,7 @@ body::after {
 }
 
 .all-menu.active {
-  color: #1a1a1a;
+  color: #1763b6;
 }
 
 .all-menu.active::before {
@@ -1842,7 +1842,7 @@ body::after {
 }
 
 .icon-home.active {
-  color: #1a1a1a;
+  color: #1763b6;
 }
 
 .icon-home.active::before {
@@ -1870,7 +1870,7 @@ body::after {
 }
 
 .icon-person.active {
-  color: #1a1a1a;
+  color: #1763b6;
 }
 
 .icon-person.active::before {
@@ -1898,7 +1898,7 @@ body::after {
 }
 
 .icon-moneybag.active {
-  color: #1a1a1a;
+  color: #1763b6;
 }
 
 .icon-moneybag.active::before {
@@ -1926,7 +1926,7 @@ body::after {
 }
 
 .icon-counsel.active {
-  color: #1a1a1a;
+  color: #1763b6;
 }
 
 .icon-counsel.active::before {
@@ -2699,17 +2699,16 @@ input.md {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 0 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 15px;
   margin-bottom: 22px;
 }
 
 .item-goods-assets .left {
-  -ms-flex-preferred-size: 85px;
-      flex-basis: 85px;
-  word-break: break-all;
+  -ms-flex-preferred-size: 103px;
+      flex-basis: 103px;
 }
 
 .item-goods-assets .right {
@@ -2718,13 +2717,31 @@ input.md {
           flex: 1;
 }
 
+.item-goods-assets .right.tbl-container {
+  border-bottom: 0;
+}
+
+.item-goods-assets .right.tbl-container tbody th {
+  padding-bottom: 11px;
+}
+
+.item-goods-assets .right.tbl-container tbody tr:last-child th {
+  padding-bottom: 0;
+}
+
 .item-goods-assets.type2 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 20px;
   background: #eaebee;
   border-radius: 5px;
 }
 
 .item-goods-assets.type2 .tit {
+  -ms-flex-preferred-size: 85px;
+      flex-basis: 85px;
+  word-break: break-all;
   font-size: 14px;
   font-weight: 500;
 }
@@ -2751,6 +2768,7 @@ input.md {
 }
 
 .item-goods.mining .tbl-definition tbody th {
+  padding-bottom: 18px;
   color: #bbb;
 }
 
