@@ -256,11 +256,11 @@ body::after {
 }
 
 .wrap > .container.sub.bg-woodsmoke {
-  background: #17171c;
+  background: #51c4d9;
   border-color: #17171c;
 }
 
-.wrap > .container.sub.bg-woodsmoke .mining-farm.theme-dark > .txt {
+.wrap > .container.sub.bg-woodsmoke .mining-farm > .txt {
   color: #fff;
 }
 
@@ -430,6 +430,15 @@ body::after {
   font-size: 30px;
   color: #fff;
   font-weight: 500;
+}
+
+.gnb-personal-info-name .btn-logout {
+  margin-left: 15px;
+  line-height: 41px;
+  vertical-align: top;
+  font-size: 14px;
+  color: #eaebee;
+  opacity: 0.85;
 }
 
 .gnb-personal-info-name .lr-box {
@@ -2401,7 +2410,7 @@ input.md {
   top: 100%;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 9;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
