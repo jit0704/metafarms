@@ -2528,9 +2528,9 @@ input.md {
 }
 
 .item-goods-info {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0 10px;
   margin-bottom: 10px;
 }
@@ -2611,6 +2611,10 @@ input.md {
 
 .item-goods-info .input-labeled:not(:first-child) {
   margin-top: 5px;
+}
+
+.item-goods-info .input-labeled em {
+  font-size: 11px;
 }
 
 .item-goods.sold-out {
