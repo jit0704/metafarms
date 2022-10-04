@@ -824,12 +824,40 @@ body::after {
   background: #fff;
 }
 
+.modal-container .stop-watching {
+  display: block;
+  margin-top: 12px;
+  text-align: right;
+}
+
+.modal-container .stop-watching button {
+  line-height: 27px;
+  font-size: 12px;
+}
+
+.modal-container .stop-watching button::before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 27px;
+  margin: 0 auto;
+  background-image: url("../images/icon_chk2.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  background-position: 0 50%;
+  background-size: 18px;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
 .modal-container .noti {
   overflow-y: auto;
-  max-height: 215px;
+  min-height: 215px;
+  max-height: 250px;
   margin-bottom: 20px;
   line-height: 21px;
-  text-align: center;
 }
 
 .modal-header {
