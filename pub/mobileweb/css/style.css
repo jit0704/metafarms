@@ -1666,6 +1666,16 @@ body::after {
   background-size: contain;
 }
 
+/* 박스 */
+.box-gray {
+  border-radius: 10px;
+  background: #f4f5f6;
+}
+
+.box-gray + .box-gray {
+  margin-top: 9px;
+}
+
 /* 텍스트 */
 .txt-definition dt {
   margin-bottom: 5px;
@@ -2402,6 +2412,41 @@ input.md {
 }
 
 /* 셀렉트 박스 */
+.selectbox-has-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 112px;
+  border-radius: 43px;
+  background: #fff;
+}
+
+.selectbox-has-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.selectbox-has-icon .selectbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.selectbox-has-icon .selectbox select {
+  width: 100%;
+  height: 34px;
+}
+
 .selectbox {
   position: relative;
 }
@@ -4063,6 +4108,66 @@ input.md {
 
 .otp-certi .btn-block {
   margin-left: -20px;
+}
+
+/* ###############################
+    swap
+################################## */
+.swap .box-gray {
+  position: relative;
+  padding: 27px 15px 27px 20px;
+}
+
+.swap .box-gray.disabled .num {
+  color: #bbb;
+}
+
+.swap .box-gray:first-child {
+  margin-top: 20px;
+}
+
+.swap .box-gray:first-child::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  margin-left: -12.5px;
+  background: url(../images/icon_arrow_circle_down.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+.swap .box-gray .where {
+  line-height: 16px;
+  color: #727e8b;
+}
+
+.swap .box-gray .num {
+  display: block;
+  margin: 12px 0 5px;
+  line-height: 16px;
+  font-size: 18px;
+}
+
+.swap .box-gray .on-hand {
+  line-height: 16px;
+  color: #bbb;
+}
+
+.swap .box-gray .on-hand-noti {
+  margin-left: 3px;
+  padding: 0 5px;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.swap .refer {
+  margin: 9px 0 0 11px;
+  line-height: 16px;
+  color: #51c4d9;
 }
 
 /* ###############################

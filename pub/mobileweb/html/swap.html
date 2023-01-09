@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+  <title>스왑하기</title>
+  <link rel="stylesheet" href="/pub/mobileweb/css/style.css">
+  <script src="/pub/mobileweb/js/lib/jquery-3.5.1.min.js"></script>
+  <script src="/pub/mobileweb/js/common/includeHTML.js"></script>
+  <script src="/pub/mobileweb/js/common/ui.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header center" include-html="/pub/mobileweb/html/common/header.html" data-title="스왑하기"></header>
+    <main class="container swap">
+      <div class="box-gray lr-box">
+        <div class="bind-left">
+          <span class="where">FROM</span>
+          <em class="num">1,000</em>
+          <span class="on-hand">
+            <span class="on-hand-num">보유 1,000,000</span>
+            <i class="on-hand-noti">MAX</i>
+          </span>
+        </div>
+        <!-- //bind-left -->
+        <div class="right">
+          <div class="selectbox-has-icon">
+            <i class="icon"><img src="/pub/mobileweb/images/icon_klay.png" alt="KLAY" /></i>
+            <span class="selectbox">
+              <select>
+                <option>KLAY</option>
+                <option>KSP</option>
+                <option>코인명</option>
+                <option>코인명</option>
+              </select>
+            </span>
+            <!-- //selectbox -->
+          </div>
+          <!-- //selectbox-has-icon -->
+        </div>
+        <!-- //right -->
+      </div>
+      <!-- //box-gray -->
+
+      <div class="box-gray lr-box disabled"> <!-- 비활성화시 disabled 클래스 추가 -->
+        <div class="bind-left">
+          <span class="where">TO</span>
+          <em class="num">275.902412</em>
+          <span class="on-hand">
+            <span class="on-hand-num">보유 1,000</span>
+          </span>
+        </div>
+        <!-- //bind-left -->
+        <div class="right">
+          <div class="selectbox-has-icon">
+            <i class="icon"><img src="/pub/mobileweb/images/icon_ksp.png" alt="KSP" /></i>
+            <span class="selectbox">
+              <select>
+                <option>KSP</option>
+                <option>KLAY</option>
+                <option>코인명</option>
+                <option>코인명</option>
+              </select>
+            </span>
+            <!-- //selectbox -->
+          </div>
+          <!-- //selectbox-has-icon -->
+        </div>
+        <!-- //right -->
+      </div>
+      <!-- //box-gray -->
+      <span class="refer">* 수수료 10 KLAY</span>
+      <a href="#" class="btn-bot-fixed btn-block large bdr-radius-none">스왑하기</a> <!-- active 클래스 추가시 버튼 활성화 디자인 -->
+    </main>
+  </div>
+  <!-- //wrap -->
+</body>
+</html>
