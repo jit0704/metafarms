@@ -16,7 +16,7 @@
       <div class="box-gray lr-box">
         <div class="bind-left">
           <span class="where">FROM</span>
-          <em class="num">1,000</em>
+          <input type="number" placeholder="수량을 입력해 주세요" class="num" /> <!-- 230110 input박스로 변경 (아래도 동일) -->
           <span class="on-hand">
             <span class="on-hand-num">보유 1,000,000</span>
             <i class="on-hand-noti">MAX</i>
@@ -24,19 +24,16 @@
         </div>
         <!-- //bind-left -->
         <div class="right">
-          <div class="selectbox-has-icon">
-            <i class="icon"><img src="/pub/mobileweb/images/icon_klay.png" alt="KLAY" /></i>
-            <span class="selectbox">
-              <select>
-                <option>KLAY</option>
-                <option>KSP</option>
-                <option>코인명</option>
-                <option>코인명</option>
-              </select>
-            </span>
-            <!-- //selectbox -->
-          </div>
-          <!-- //selectbox-has-icon -->
+          <!-- 230110 셀렉트 박스 HTML마크업 구조 변경 (아래도 동일) -->
+          <span class="selectbox radius">
+            <select>
+              <option>KLAY</option>
+              <option>KSP</option>
+              <option>코인명</option>
+              <option>코인명</option>
+            </select>
+          </span>
+          <!-- //selectbox -->
         </div>
         <!-- //right -->
       </div>
@@ -45,26 +42,22 @@
       <div class="box-gray lr-box disabled"> <!-- 비활성화시 disabled 클래스 추가 -->
         <div class="bind-left">
           <span class="where">TO</span>
-          <em class="num">275.902412</em>
+          <input type="number" value="275.902412" placeholder="수량을 입력해 주세요" class="num" disabled /> <!-- 비활성화시 disabled 속성 추가 -->
           <span class="on-hand">
             <span class="on-hand-num">보유 1,000</span>
           </span>
         </div>
         <!-- //bind-left -->
         <div class="right">
-          <div class="selectbox-has-icon">
-            <i class="icon"><img src="/pub/mobileweb/images/icon_ksp.png" alt="KSP" /></i>
-            <span class="selectbox">
-              <select>
-                <option>KSP</option>
-                <option>KLAY</option>
-                <option>코인명</option>
-                <option>코인명</option>
-              </select>
-            </span>
-            <!-- //selectbox -->
-          </div>
-          <!-- //selectbox-has-icon -->
+          <span class="selectbox radius">
+            <select>
+              <option>KLAY</option>
+              <option>KSP</option>
+              <option>코인명</option>
+              <option>코인명</option>
+            </select>
+          </span>
+          <!-- //selectbox -->
         </div>
         <!-- //right -->
       </div>
