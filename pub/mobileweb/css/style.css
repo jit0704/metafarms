@@ -4177,6 +4177,13 @@ input.md {
   font-size: 11px;
 }
 
+.swap .box-gray .btn-arrow-down::after {
+  top: 6px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .swap .refer {
   margin: 9px 0 0 11px;
   line-height: 16px;
