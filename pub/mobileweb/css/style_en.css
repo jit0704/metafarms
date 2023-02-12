@@ -187,7 +187,7 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1;
-  content: url(../images/main/btn_main_product.png) url(../images/main/btn_main_product_active.png) url(../images/main/btn_main_mining.png) url(../images/main/btn_main_mining_active.png) url(../images/main/btn_main_nfc.png) url(../images/main/btn_main_nfc_active.png) url(../images/main/btn_main_defi.png) url(../images/main/btn_main_defi_active.png) url(../images/main/btn_main_swap.png) url(../images/main/btn_main_swap_active.png) url(../images/main/btn_main_mall.png) url(../images/main/btn_main_mall_active.png);
+  content: url(../images/main_en/btn_main_product.png) url(../images/main_en/btn_main_product_active.png) url(../images/main_en/btn_main_mining.png) url(../images/main_en/btn_main_mining_active.png) url(../images/main_en/btn_main_nfc.png) url(../images/main_en/btn_main_nfc_active.png) url(../images/main_en/btn_main_defi.png) url(../images/main_en/btn_main_defi_active.png) url(../images/main_en/btn_main_swap.png) url(../images/main_en/btn_main_swap_active.png) url(../images/main_en/btn_main_mall.png) url(../images/main_en/btn_main_mall_active.png);
 }
 
 /* ###############################
@@ -3250,53 +3250,53 @@ input.md {
 }
 
 .main .large-menu .menu-product {
-  background-image: url(../images/main/btn_main_product.png);
+  background-image: url(../images/main_en/btn_main_product.png);
 }
 
 .main .large-menu .menu-product:active {
-  background-image: url(../images/main/btn_main_product_active.png);
+  background-image: url(../images/main_en/btn_main_product_active.png);
 }
 
 .main .large-menu .menu-mining {
-  background-image: url(../images/main/btn_main_mining.png);
+  background-image: url(../images/main_en/btn_main_mining.png);
 }
 
 .main .large-menu .menu-mining:active {
-  background-image: url(../images/main/btn_main_mining_active.png);
+  background-image: url(../images/main_en/btn_main_mining_active.png);
 }
 
 .main .large-menu .menu-nfc {
-  background-image: url(../images/main/btn_main_nfc.png);
+  background-image: url(../images/main_en/btn_main_nfc.png);
 }
 
 .main .large-menu .menu-nfc:active {
-  background-image: url(../images/main/btn_main_nfc_active.png);
+  background-image: url(../images/main_en/btn_main_nfc_active.png);
 }
 
 .main .large-menu .menu-defi {
-  background-image: url(../images/main/btn_main_defi.png);
+  background-image: url(../images/main_en/btn_main_defi.png);
 }
 
 .main .large-menu .menu-defi:active {
-  background-image: url(../images/main/btn_main_defi_active.png);
+  background-image: url(../images/main_en/btn_main_defi_active.png);
 }
 
 .main .large-menu .menu-swap {
   padding-top: 21%;
-  background-image: url(../images/main/btn_main_swap.png);
+  background-image: url(../images/main_en/btn_main_swap.png);
 }
 
 .main .large-menu .menu-swap:active {
-  background-image: url(../images/main/btn_main_swap_active.png);
+  background-image: url(../images/main_en/btn_main_swap_active.png);
 }
 
 .main .large-menu .menu-mall {
   padding-top: 21%;
-  background-image: url(../images/main/btn_main_mall.png);
+  background-image: url(../images/main_en/btn_main_mall.png);
 }
 
 .main .large-menu .menu-mall:active {
-  background-image: url(../images/main/btn_main_mall_active.png);
+  background-image: url(../images/main_en/btn_main_mall_active.png);
 }
 
 .main .about {
@@ -4307,22 +4307,22 @@ input.md {
   }
   /* 메인 */
   .main .large-menu .menu-product:hover {
-    background-image: url(../images/main/btn_main_product_active.png);
+    background-image: url(../images/main_en/btn_main_product_active.png);
   }
   .main .large-menu .menu-mining:hover {
-    background-image: url(../images/main/btn_main_mining_active.png);
+    background-image: url(../images/main_en/btn_main_mining_active.png);
   }
   .main .large-menu .menu-nfc:hover {
-    background-image: url(../images/main/btn_main_nfc_active.png);
+    background-image: url(../images/main_en/btn_main_nfc_active.png);
   }
   .main .large-menu .menu-defi:hover {
-    background-image: url(../images/main/btn_main_defi_active.png);
+    background-image: url(../images/main_en/btn_main_defi_active.png);
   }
   .main .large-menu .menu-swap:hover {
-    background-image: url(../images/main/btn_main_swap_active.png);
+    background-image: url(../images/main_en/btn_main_swap_active.png);
   }
   .main .large-menu .menu-mall:hover {
-    background-image: url(../images/main/btn_main_mall_active.png);
+    background-image: url(../images/main_en/btn_main_mall_active.png);
   }
   .main .notice-slide .swiper-notice .swiper-slide {
     width: 95%;
